@@ -1,12 +1,12 @@
-Food.create(:name => "tomato", :image => "", :shelf_life => 7, )
+# Food.create(:name => "tomato", :image => "", :shelf_life => 7, )
 
-Food.create(:name => "squash", :image => "", :shelf_life => 5)
+# Food.create(:name => "squash", :image => "", :shelf_life => 5)
 
-Food.create(:name => "pineapple", :image => "", :shelf_life => 5)
+# Food.create(:name => "pineapple", :image => "", :shelf_life => 5)
 
-Food.create(:name => "apple", :image => "", :shelf_life => 28)
+# Food.create(:name => "apple", :image => "", :shelf_life => 28)
 
-Food.create(:name => "strawberry", :image => "",  :shelf_life => 5)
+# Food.create(:name => "strawberry", :image => "",  :shelf_life => 5)
 
 FoodCategory.create(:name => "Fruits", :image => "")
 

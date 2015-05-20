@@ -15,7 +15,7 @@ class FoodUsersController < ApplicationController
 
   # GET /food_users/new
   def new
-    @custom_notification = FoodUser.new
+    @food_user = FoodUser.new
   end
 
  # GET /food_users/1/edit
