@@ -16,7 +16,7 @@
     <% @food_users.each do |food_user| %>
       <tr>
         <td><%= food_user.user %></td>
-        <td><%= food_user.food %></td>
+        <td><%= food_user.food.try(:name) %></td>
         <td><%= food_user.custom_reminder %></td>
         <td><%= link_to 'Show', food_user %></td>
         <td><%= link_to 'Edit', edit_food_user_path(food_user) %></td>

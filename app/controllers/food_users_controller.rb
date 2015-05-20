@@ -10,16 +10,19 @@ class FoodUsersController < ApplicationController
   # GET /food_users/1
   # GET /food_users/1.json
   def show
-  end
+    @notification = FoodUser.find(params[:id])
+  end
 
-  # GET /food_users/new
-  def new
-    @food_user = FoodUser.new
-  end
+  # GET /food_users/new
+  def new
+    @custom_notification = FoodUser.new
+  end
 
-  # GET /food_users/1/edit
-  def edit
-  end
+ # GET /food_users/1/edit
+  def edit
+    @notification = FoodUser.find(params[:id])
+    @food = @notification.food
+  end
 
   # POST /food_users
   # POST /food_users.json

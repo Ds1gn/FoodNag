@@ -10,5 +10,18 @@
   <%= @food_category.image %>
 </p>
 
+<% @foods.each do |food| %>
+<p>
+  <strong>Name:</strong>
+  <%= @food %>
+</p>
+
+<p>
+  <%= link_to food.name, food %>
+</p>
+
+<% end %>
 <%= link_to 'Edit', edit_food_category_path(@food_category) %> |
 <%= link_to 'Back', food_categories_path %>
+
+

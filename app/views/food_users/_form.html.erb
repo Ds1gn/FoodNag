@@ -12,17 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :food_id %><br>
-    <%= f.text_field :food_id %>
-  </div>
-  <div class="field">
     <%= f.label :custom_reminder %><br>
     <%= f.date_select :custom_reminder %>
   </div>
+
+  <%= f.hidden_field :food_id, :value => @food.id %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
