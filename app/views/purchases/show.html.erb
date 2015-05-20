@@ -7,12 +7,12 @@
 
 <p>
   <strong>Food:</strong>
-  <%= @purchase.food %>
+  <%= @purchase.food.name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @purchase.user %>
+  <%= @purchase.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_purchase_path(@purchase) %> |

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @expiration.food %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expiration.user %>
+</p>
+
+<p>
+  <strong>Expires at:</strong>
+  <%= @expiration.expires_at %>
+</p>
+
+<%= link_to 'Edit', edit_expiration_path(@expiration) %> |
+<%= link_to 'Back', expirations_path %>

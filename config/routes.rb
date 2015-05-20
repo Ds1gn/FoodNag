@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  resources :expirations
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   resources :purchases
   resources :food_users
   resources :food_categories
-  resources :foods
+  resources :foods do
+    member do
+      post 'purchase'
+    end
+  end
+
 
   root to: 'foods#index'
 

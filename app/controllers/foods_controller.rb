@@ -13,6 +13,12 @@ class FoodsController < ApplicationController
     @food_user = FoodUser.new
   end
 
+  def purchase
+    @purchase = Purchase.new food_id: params[:id], user_id: current_user.id
+    @purchase.save
+    redirect_to @purchase
+  end
+
   # GET /foods/new
   def new
     @food = Food.new
