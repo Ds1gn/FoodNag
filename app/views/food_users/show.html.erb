@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @food_user.user %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @food_user.food %>
+</p>
+
+<p>
+  <strong>Custom reminder:</strong>
+  <%= @food_user.custom_reminder %>
+</p>
+
+<%= link_to 'Edit', edit_food_user_path(@food_user) %> |
+<%= link_to 'Back', food_users_path %>

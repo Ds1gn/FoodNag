@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Food Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Food</th>
+      <th>Custom reminder</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_users.each do |food_user| %>
+      <tr>
+        <td><%= food_user.user %></td>
+        <td><%= food_user.food %></td>
+        <td><%= food_user.custom_reminder %></td>
+        <td><%= link_to 'Show', food_user %></td>
+        <td><%= link_to 'Edit', edit_food_user_path(food_user) %></td>
+        <td><%= link_to 'Destroy', food_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Food user', new_food_user_path %>

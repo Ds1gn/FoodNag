@@ -1,0 +1,2 @@
+module FoodUsersHelper
+end
