@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :custom_reminder %><br>
-    <%= f.date_select :custom_reminder %>
+    <%= f.label 'How manys before expiration would you like to be reminded?' %><br>
+    <%= f.number_field :custom_reminder %>
   </div>
 
   <%= f.hidden_field :food_id, :value => @food.id %>
