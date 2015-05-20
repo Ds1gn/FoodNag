@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520031254) do
+ActiveRecord::Schema.define(version: 20150520184829) do
 
   create_table "food_categories", force: :cascade do |t|
     t.string   "name"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20150520031254) do
   create_table "food_users", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "food_id"
-    t.date     "custom_reminder"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "custom_reminder"
   end
 
   add_index "food_users", ["food_id"], name: "index_food_users_on_food_id"
