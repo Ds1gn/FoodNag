@@ -14,7 +14,7 @@ FoodCategory.create(:name => "Vegetable", :image => "")
 
 FoodCategory.create(:name => "Meats", :image => "")
 
-FoodCategory.create(:name => "Diary", :image => "")
+FoodCategory.create(:name => "Dairy", :image => "")
 
 
 fruit = FoodCategory.find_by_name("Fruits")

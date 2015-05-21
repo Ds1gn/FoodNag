@@ -24,6 +24,19 @@
   </tbody>
 </table>
 
+
+
+
+<% @food_categories.each do |fc| %>
+<%= fc.name %>: 
+<% fc.foods.each do |f| %>
+<%= link_to f.name, purchase_food_path(f), method: :post %>
+<% end %>
+<br>
+<% end %>
+
+
+
 <br>
 
 <%= link_to 'New Food category', new_food_category_path %>

@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   resources :purchases
   resources :food_users
   resources :food_categories
-  resources :foods do
-    member do
-      post 'purchase'
-    end
-  end
-
+  resources :foods
+  #  do
+  #   member do
+  #     post 'purchase'
+  #   end
+  # end
+  post '/purchase/:id' => 'foods#purchase', as: :purchase_food
 
   root to: 'foods#index'
 

@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
   end
 
   def purchase
-    @purchase = Purchase.new food_id: params[:id], user_id: current_user.id
+    @purchase = Purchase.new(food_id: params[:id], user_id: current_user.id)
     @purchase.save
     redirect_to @purchase
   end

@@ -16,8 +16,8 @@
     <% @purchases.each do |purchase| %>
       <tr>
         <td><%= purchase.purchase_date %></td>
-        <td><%= purchase.food %></td>
-        <td><%= purchase.user %></td>
+        <td><%= purchase.food.name %></td>
+        <td><%= purchase.user.email %></td>
         <td><%= link_to 'Show', purchase %></td>
         <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
         <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
