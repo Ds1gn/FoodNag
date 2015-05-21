@@ -15,7 +15,7 @@
   <tbody>
     <% @purchases.each do |purchase| %>
       <tr>
-        <td><%= purchase.created_at %></td>
+        <td><%= purchase.created_at.strftime("%b %d, %Y") %></td>
         <td><%= purchase.food.name %></td>
         <td><%= purchase.user.email %></td>
         <td><%= link_to 'Show', purchase %></td>
