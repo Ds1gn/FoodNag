@@ -8,9 +8,20 @@
                       html: { class: "form-horizontal center"} do |f| %>
 
 
-          <div class="field">
-            <%= f.label :first_name %><br />
-            <%= f.text_field :first_name, autofocus: true %>
+          <div class="form-group">
+            <%= f.text_field :first_name, autofocus: true, placeholder: "First Name", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :last_name, autofocus: true, placeholder: "Last Name", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :phone, autofocus: true, placeholder: "(555) 555-5555", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :zip, autofocus: true, placeholder: "Zip", class: "form-control" %>
           </div>
 
           <div class="form-group">
