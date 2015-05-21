@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Your food is about to expire, <%= @user.first_name %></h1>
+    <p>On <%= @purchase.created_at %> you bought <%= @food.name %>, and it will expire on <%= @expiration.expiration_date %> </p>
+  </body>
+</html>

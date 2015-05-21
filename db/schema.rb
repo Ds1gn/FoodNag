@@ -11,17 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520222438) do
+ActiveRecord::Schema.define(version: 20150521224809) do
 
   create_table "expirations", force: :cascade do |t|
     t.integer  "food_id"
     t.integer  "user_id"
     t.date     "expires_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "purchase_id"
   end
 
   add_index "expirations", ["food_id"], name: "index_expirations_on_food_id"
+  add_index "expirations", ["purchase_id"], name: "index_expirations_on_purchase_id"
   add_index "expirations", ["user_id"], name: "index_expirations_on_user_id"
 
   create_table "food_categories", force: :cascade do |t|
