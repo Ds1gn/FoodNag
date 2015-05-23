@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipe/ingredient'
+
   resources :expirations
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   resources :purchases
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
   #   end
   # end
   post '/purchase/:id' => 'foods#purchase', as: :purchase_food
+
+  post 'results' => 'recipe#results'
 
   root to: 'foods#index'
 
