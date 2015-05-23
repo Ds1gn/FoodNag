@@ -3,11 +3,12 @@ require 'Unirest'
 
 
 	def self.get_recipes(ingredient)
-		response = Unirest.get "https://webknox-recipes.p.mashape.com/recipes/search?number=10&offset=0&query=#{ingredient}",
-	  	headers:{
-	    "X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
-	    "Accept" => "application/json"
-	  	}
+# These code snippets use an open-source library. http://unirest.io/ruby
+		response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredient}",
+  		headers:{
+    	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
+    	"Accept" => "application/json"
+  		}
 		
 		recipe_result = response.body
 	
