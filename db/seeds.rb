@@ -51,6 +51,10 @@ Food.create(:name => "beef", :food_category => meat, :image => "", :shelf_life =
 
 Food.create(:name => "pork", :food_category => meat, :image => "", :shelf_life => 2)
 
+Food.create(:name => "turkey", :food_category => meat, :image => "", :shelf_life => 1)
+
+Food.create(:name => "sliced turkey", :food_category => meat, :image => "", :shelf_life => 1)
+
 Food.create(:name => "shrimp", :food_category => seafood, :image => "", :shelf_life => 2)
 
 Food.create(:name => "salmon", :food_category => seafood, :image => "", :shelf_life => 2)
