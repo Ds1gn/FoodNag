@@ -15,4 +15,5 @@ class Purchase < ActiveRecord::Base
  end
 
  
+ 
 end

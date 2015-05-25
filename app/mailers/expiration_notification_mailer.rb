@@ -5,7 +5,7 @@ class ExpirationNotificationMailer < ApplicationMailer
 	    @food = Food.find(food_id)
 	    @purchase = Purchase.find(purchase_id)
 	    
-	    mail(to: @user.email, subject: 'Your food will expire')
+	    mail(to: @user.email, subject: 'Food Expiration Reminder')
   	end
 
 end
