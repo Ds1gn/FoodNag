@@ -6,8 +6,6 @@ class RecipeController < ApplicationController
 
   def results
   	@display = Recipe.get_recipes(params[:ingredient])
-
-
-
+  	@ingredient_lines = @display["ingredientLines"]
   end
 end

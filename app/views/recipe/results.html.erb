@@ -1,3 +1,8 @@
-<h1>Hi</h1>
 
-# <%= @display %>
+<h1><%= @display["label"] %></h2>
+
+<p><%= @display["level"] %></p>
+
+<% @ingredient_lines.each do |r| %>
+<p><%= r %></p>
+<% end %>

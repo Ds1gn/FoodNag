@@ -11,6 +11,7 @@ require 'Unirest'
   		}
 		
 		recipe_result = response.body
-	
+		recipe_result["hits"][0]["recipe"]
+
 	end
 end
