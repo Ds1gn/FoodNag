@@ -11,6 +11,7 @@ require 'Unirest'
   		}
 		
 		recipe_result = response.body
+		return nil if recipe_result.blank? || recipe_result["hits"].blank?
 		recipe_result["hits"][0]["recipe"]
 
 	end
