@@ -3,6 +3,8 @@
 
 <p><%= @display["level"] %></p>
 
+<p><%= image_tag @display["image"] %></p>
+
 <% @ingredient_lines.each do |r| %>
 <p><%= r %></p>
 <% end %>
@@ -12,6 +14,8 @@
 <h1><%= @display2["label"] %></h2>
 
 <p><%= @display2["level"] %></p>
+
+<p><%= image_tag @display2["image"] %></p>
 
 <% @ingredient_lines2.each do |r| %>
 <p><%= r %></p>
