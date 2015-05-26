@@ -38,8 +38,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Something</th>
+      <th>Purchase List</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -47,7 +46,6 @@
   <tbody>
     <% @purchases.each do |p| %>
       <tr>
-        <td><%= p %></td>
         <td><%= p.food.name || "None" %></td>
 
       </tr>
