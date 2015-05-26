@@ -6,5 +6,17 @@
   <body>
     <h1>Your food is about to expire, <%= @user.first_name %></h1>
     <p>On <%= @purchase.created_at.strftime("%b %d, %Y") %> you bought <%= @food.name %>, and it will expire on <%= @expiration.expiration_date.strftime("%b %d, %Y") %> </p>
+
+	<% unless @recipe.blank? %>
+	<h1><%= @recipe["label"] %></h2>
+
+	<p><%= @recipe["level"].humanize %></p>
+
+	<p><%= image_tag @recipe["image"] %></p>
+
+<!-- Do we want to add ingredient list here?  -->
+
+<p><strong>Source: </strong><%= @recipe["url"] %>
+<% end %>
   </body>
 </html>

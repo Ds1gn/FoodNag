@@ -14,5 +14,7 @@ class Purchase < ActiveRecord::Base
  	Expiration.create(food_id: food.id, purchase_id: self.id)
  end
 
+
  
+
 end
