@@ -1,15 +1,16 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /purchases
   # GET /purchases.json
   def index
-    @purchases = Purchase.all
+    @purchases = current_user.Purchase.all
   end
 
   # GET /purchases/1
   # GET /purchases/1.json
   def show
+    @purchases = Purchase.find(params[:id])
   end
 
   # GET /purchases/new

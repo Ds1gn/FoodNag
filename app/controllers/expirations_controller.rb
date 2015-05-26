@@ -1,10 +1,10 @@
 class ExpirationsController < ApplicationController
   before_action :set_expiration, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /expirations
   # GET /expirations.json
   def index
-    @expirations = Expiration.all
+    @expirations = current_user.Expiration.all
   end
 
   # GET /expirations/1
@@ -71,4 +71,14 @@ class ExpirationsController < ApplicationController
     def expiration_params
       params.require(:expiration).permit(:food_id, :user_id, :expires_at)
     end
+
+    def admin_only
+    unless current_user.admin?
+      
+      redirect_to :back, :alert => "Access denied."
+
+      return false
+    end
+  end
+
 end

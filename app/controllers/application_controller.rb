@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -13,5 +13,16 @@ class ApplicationController < ActionController::Base
 		devise_parameter_sanitizer.for(:sign_up) << [:first_name, :last_name, :phone, :zip]
 		devise_parameter_sanitizer.for(:account_update) << [:first_name, :last_name, :phone, :zip]
 	end
+
+  private
+
+  def admin_only
+    unless current_user.admin?
+      
+      redirect_to :back, :alert => "Access denied."
+
+      return false
+    end
+  end
 
 end

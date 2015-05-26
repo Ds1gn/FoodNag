@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
-  before_action :set_food, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_food, only: [:show, :edit, :update]
+  before_action :authenticate_user!
   # GET /foods
   # GET /foods.json
   def index
@@ -23,17 +23,31 @@ class FoodsController < ApplicationController
   # GET /foods/new
   def new
     @food = Food.new
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
   end
 
   # GET /foods/1/edit
   def edit
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
   end
 
   # POST /foods
   # POST /foods.json
   def create
     @food = Food.new(food_params)
-
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
     respond_to do |format|
       if @food.save
         format.html { redirect_to @food, notice: 'Food was successfully created.' }
@@ -79,4 +93,14 @@ class FoodsController < ApplicationController
     def food_params
       params.require(:food).permit(:name, :image, :shelf_life)
     end
+
+    def admin_only
+    unless current_user.admin?
+      
+      redirect_to :back, :alert => "Access denied."
+
+      return false
+    end
+  end
+
 end
