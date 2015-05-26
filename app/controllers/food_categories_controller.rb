@@ -1,10 +1,15 @@
 class FoodCategoriesController < ApplicationController
-  before_action :set_food_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_purchase, only: [:show, :edit, :update, :destroy]
+  # before_action :set_food_category, only: [:show, :edit, :update, :destroy]
 
   # GET /food_categories
   # GET /food_categories.json
   def index
     @food_categories = FoodCategory.all
+
+
+    @purchases = Purchase.all
+    render layout: !request.xhr?
   end
 
   # GET /food_categories/1
@@ -28,8 +33,14 @@ class FoodCategoriesController < ApplicationController
     @food_category = FoodCategory.new(food_category_params)
 
     respond_to do |format|
-      if @food_category.save
-        format.html { redirect_to @food_category, notice: 'Food category was successfully created.' }
+      if @purchase.save
+        format.html { 
+          if request.xhr?
+            redirect_to food_category_path
+          else
+            redirect_to @food_category, notice: 'Food was successfully added.' 
+          end
+        }
         format.json { render :show, status: :created, location: @food_category }
       else
         format.html { render :new }
@@ -64,6 +75,10 @@ class FoodCategoriesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_purchase
+      @purchase = Purchase.find(params[:id])
+    end
+
     def set_food_category
       @food_category = FoodCategory.find(params[:id])
     end
