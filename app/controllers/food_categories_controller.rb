@@ -30,6 +30,7 @@ class FoodCategoriesController < ApplicationController
   # POST /food_categories
   # POST /food_categories.json
   def create
+    # @purchase = Purchase.new(set_purchase)
     @food_category = FoodCategory.new(food_category_params)
 
     respond_to do |format|

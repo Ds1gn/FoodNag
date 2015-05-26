@@ -23,12 +23,26 @@ ready = function(){
 	// 	getTasks();
 	// }, 5000);
 
-	$('body').on('ajax:complete', '#new_task', function(xhr, obj){
-		console.dir(arguments);
-		console.log(obj.responseText);
-		$('body').html(obj.responseText);
-		$('#task_goal').focus()
-	});
+	// $('body').on('ajax:complete', '#new_purchase', function(xhr, obj){
+	// 	console.dir(arguments);
+	// 	console.log(obj.responseText);
+	// 	$('body').html(obj.responseText);
+	// 	$('#task_goal').focus()
+	// });
+
+	$('.add_food').on('click', function() {
+		var foodId = $(this).data('food-id');
+
+		$.ajax({
+			method: "POST",
+			url: "purchases.json",
+			data: {
+				purchase: { food_id: foodId }
+			}
+		}).success(function(data){
+			console.log('wtf')
+		});
+	})
 }
 
 $(document).ready(ready);

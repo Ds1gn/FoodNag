@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Food Categories</h1>
+<h1>Choose Your Items</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -23,18 +23,20 @@
     <% end %>
   </tbody>
 </table>
-
+ -->
 
 
 
 <% @food_categories.each do |fc| %>
 <%= fc.name %>: 
 <% fc.foods.each do |f| %>
-<%= link_to f.name, purchase_food_path(f), method: :post %>
+
+<span class="add_food" data-food-id="<%= f.id %>"><%= f.name %></span>
+<%#= link_to f.name, purchase_food_path(f), method: :post %>
 <% end %>
 <br>
 <% end %>
-
+</br></br>
 <table>
   <thead>
     <tr>

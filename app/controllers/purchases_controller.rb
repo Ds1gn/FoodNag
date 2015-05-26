@@ -14,6 +14,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
+    @purchases = Purchase.all 
     @purchase = Purchase.new
   end
 
@@ -24,10 +25,17 @@ class PurchasesController < ApplicationController
   # POST /purchases
   # POST /purchases.json
   def create
-    @purchase = Purchase.new(purchase_params)
+    @purchase = current_user.purchases.new(purchase_params)
 
     respond_to do |format|
       if @purchase.save
+        format.html { 
+          if request.xhr?
+            redirect_to food_category_path
+          else
+            redirect_to @food_category, notice: 'Food was successfully added.'
+          end
+        }
         format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else
@@ -36,6 +44,8 @@ class PurchasesController < ApplicationController
       end
     end
   end
+
+
 
   # PATCH/PUT /purchases/1
   # PATCH/PUT /purchases/1.json
