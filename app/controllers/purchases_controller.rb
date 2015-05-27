@@ -10,6 +10,7 @@ class PurchasesController < ApplicationController
   # GET /purchases/1
   # GET /purchases/1.json
   def show
+
   end
 
   # GET /purchases/new
@@ -29,13 +30,6 @@ class PurchasesController < ApplicationController
 
     respond_to do |format|
       if @purchase.save
-        format.html { 
-          if request.xhr?
-            redirect_to food_category_path
-          else
-            redirect_to @food_category, notice: 'Food was successfully added.'
-          end
-        }
         format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else

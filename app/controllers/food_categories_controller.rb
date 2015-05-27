@@ -9,7 +9,7 @@ class FoodCategoriesController < ApplicationController
 
 
     @purchases = Purchase.all
-    render layout: !request.xhr?
+    # render layout: !request.xhr?
   end
 
   # GET /food_categories/1
@@ -34,14 +34,7 @@ class FoodCategoriesController < ApplicationController
     @food_category = FoodCategory.new(food_category_params)
 
     respond_to do |format|
-      if @purchase.save
-        format.html { 
-          if request.xhr?
-            redirect_to food_category_path
-          else
-            redirect_to @food_category, notice: 'Food was successfully added.' 
-          end
-        }
+      if @food_category.save
         format.json { render :show, status: :created, location: @food_category }
       else
         format.html { render :new }
