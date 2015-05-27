@@ -1,5 +1,5 @@
 class FoodCategoriesController < ApplicationController
-  before_action :set_food_category, only: [:show, :index]
+  before_action :set_food_category, only: [:show]
   before_action :authenticate_user!
 
   # GET /food_categories

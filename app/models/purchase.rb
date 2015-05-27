@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: purchases
+#
+#  id            :integer          not null, primary key
+#  purchase_date :date
+#  food_id       :integer
+#  user_id       :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class Purchase < ActiveRecord::Base
   belongs_to :food
   belongs_to :user
