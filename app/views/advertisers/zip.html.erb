@@ -1,0 +1,6 @@
+<h1>Advertisers#showo</h1>
+<p>You typed <%= @zipcode %></p>
+
+<% @purchases.each do |purchase| %>
+	<p><%= purchase.food.name %></p>
+<% end %>

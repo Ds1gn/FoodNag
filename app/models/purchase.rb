@@ -22,6 +22,7 @@ class Purchase < ActiveRecord::Base
   scope :meats, -> { joins(:food).where(foods: {food_category_id: 3})}
   scope :vegetable, -> { joins(:food).where(foods: {food_category_id: 2})}
   scope :fruits, -> { joins(:food).where(foods: {food_category_id: 1})}
+  scope :zip, ->(zip) { joins(:user).where(users: {zip: zip}) }
 
 
 

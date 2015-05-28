@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+
 <% Purchase.view_by_zip.each do |zip_hash| %>
   <br>
   <% zip_hash.each do |zip, purchases| %>
