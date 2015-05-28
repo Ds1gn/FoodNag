@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Choose Your Items</h1>
 
@@ -20,6 +19,7 @@
   <% @purchases.each do |p| %>
     <li>
       <%= p.food.name || "None" %>
+      <%= link_to 'delete', purchase_path(p), method: :delete %>
     </li>
   <% end %>
 </ul>

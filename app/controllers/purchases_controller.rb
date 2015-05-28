@@ -5,6 +5,8 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     @purchases = Purchase.all
+
+
   end
 
   # GET /purchases/1
@@ -60,7 +62,7 @@ class PurchasesController < ApplicationController
   def destroy
     @purchase.destroy
     respond_to do |format|
-      format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Purchase was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

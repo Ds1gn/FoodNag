@@ -46,5 +46,10 @@ group :development, :test do
   gem 'spring'
   gem 'devise'
   gem 'unirest'
+  gem 'paranoia'
+  gem 'chartkick'
+  gem 'hightop'
+  gem 'active_median'
+  gem 'groupdate'
 end
 

@@ -1,9 +1,16 @@
 class Purchase < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :food
   belongs_to :user
   has_one :expiration
 
   after_create :set_expiration
+
+  scope :meats, -> { joins(:food).where(foods: {food_category_id: 3})}
+  scope :vegetable, -> { joins(:food).where(foods: {food_category_id: 2})}
+  scope :fruits, -> { joins(:food).where(foods: {food_category_id: 1})}
+
 
 
  def food_user
@@ -14,7 +21,10 @@ class Purchase < ActiveRecord::Base
  	Expiration.create(food_id: food.id, purchase_id: self.id)
  end
 
-
- 
+# def get_food_name
+# 	Purchase.all.each do |n|
+# 		n.name food_id
+# 	end
+# end
 
 end

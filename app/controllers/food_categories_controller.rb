@@ -1,4 +1,5 @@
 class FoodCategoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
   # before_action :set_food_category, only: [:show, :edit, :update, :destroy]
 
@@ -8,7 +9,7 @@ class FoodCategoriesController < ApplicationController
     @food_categories = FoodCategory.all
 
 
-    @purchases = Purchase.all
+    @purchases = current_user.purchases.all
     # render layout: !request.xhr?
   end
 
