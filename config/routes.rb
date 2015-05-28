@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   # end
   post '/purchase/:id' => 'foods#purchase', as: :purchase_food
 
+  # post '/purchase/:id' => 'purchase#new', as: :purchase_food
+
+
   post 'results' => 'recipe#results'
 
  authenticated :user do

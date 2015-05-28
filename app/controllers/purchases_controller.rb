@@ -15,6 +15,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
+    @purchases = Purchase.all 
     @purchase = Purchase.new
   end
 
@@ -25,7 +26,7 @@ class PurchasesController < ApplicationController
   # POST /purchases
   # POST /purchases.json
   def create
-    @purchase = Purchase.new(purchase_params)
+    @purchase = current_user.purchases.new(purchase_params)
 
     respond_to do |format|
       if @purchase.save
@@ -37,6 +38,8 @@ class PurchasesController < ApplicationController
       end
     end
   end
+
+
 
   # PATCH/PUT /purchases/1
   # PATCH/PUT /purchases/1.json
@@ -57,7 +60,7 @@ class PurchasesController < ApplicationController
   def destroy
     @purchase.destroy
     respond_to do |format|
-      format.html { redirect_to purchases_url, notice: 'Purchase was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Purchase was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
