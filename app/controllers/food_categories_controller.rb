@@ -1,12 +1,17 @@
 class FoodCategoriesController < ApplicationController
-  before_action :set_food_category, only: [:show]
   before_action :authenticate_user!
   before_action :is_advertiser?
+  before_action :set_food_category, only: [:show]
+ 
 
   # GET /food_categories
   # GET /food_categories.json
   def index
     @food_categories = FoodCategory.all
+
+
+    @purchases = current_user.purchases.all
+    # render layout: !request.xhr?
   end
 
   # GET /food_categories/1
@@ -32,6 +37,7 @@ class FoodCategoriesController < ApplicationController
   # POST /food_categories
   # POST /food_categories.json
   def create
+    # @purchase = Purchase.new(set_purchase)
     @food_category = FoodCategory.new(food_category_params)
     unless current_user.admin?
       unless @user == current_user
@@ -40,7 +46,6 @@ class FoodCategoriesController < ApplicationController
     end
     respond_to do |format|
       if @food_category.save
-        format.html { redirect_to @food_category, notice: 'Food category was successfully created.' }
         format.json { render :show, status: :created, location: @food_category }
       else
         format.html { render :new }
@@ -75,6 +80,10 @@ class FoodCategoriesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_purchase
+      @purchase = Purchase.find(params[:id])
+    end
+
     def set_food_category
       @food_category = FoodCategory.find(params[:id])
     end

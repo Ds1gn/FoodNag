@@ -47,6 +47,10 @@ group :development, :test do
   gem 'devise'
   gem 'unirest'
   gem 'annotate', '~> 2.6.6'
-
+  gem 'paranoia'
+  gem 'chartkick'
+  gem 'hightop'
+  gem 'active_median'
+  gem 'groupdate'
 end
 
