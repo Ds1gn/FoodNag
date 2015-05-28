@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: expirations
+#
+#  id          :integer          not null, primary key
+#  food_id     :integer
+#  user_id     :integer
+#  expires_at  :date
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  purchase_id :integer
+#
+
 class Expiration < ActiveRecord::Base
   belongs_to :food
   belongs_to :purchase

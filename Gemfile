@@ -46,6 +46,7 @@ group :development, :test do
   gem 'spring'
   gem 'devise'
   gem 'unirest'
+  gem 'annotate', '~> 2.6.6'
   gem 'paranoia'
   gem 'chartkick'
   gem 'hightop'

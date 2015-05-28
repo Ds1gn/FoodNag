@@ -1,7 +1,8 @@
 class FoodCategoriesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_purchase, only: [:show, :edit, :update, :destroy]
-  # before_action :set_food_category, only: [:show, :edit, :update, :destroy]
+  before_action :is_advertiser?
+  before_action :set_food_category, only: [:show]
+ 
 
   # GET /food_categories
   # GET /food_categories.json
@@ -22,6 +23,11 @@ class FoodCategoriesController < ApplicationController
   # GET /food_categories/new
   def new
     @food_category = FoodCategory.new
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
   end
 
   # GET /food_categories/1/edit
@@ -33,7 +39,11 @@ class FoodCategoriesController < ApplicationController
   def create
     # @purchase = Purchase.new(set_purchase)
     @food_category = FoodCategory.new(food_category_params)
-
+    unless current_user.admin?
+      unless @user == current_user
+        redirect_to :back, :alert => "Access denied."
+      end
+    end
     respond_to do |format|
       if @food_category.save
         format.json { render :show, status: :created, location: @food_category }
@@ -80,6 +90,7 @@ class FoodCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def food_category_params
-      params.require(:food_category).permit(:name, :image)
+      params.require(:food_category).permit(:id, :name, :image)
     end
+  
 end
