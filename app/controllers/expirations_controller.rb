@@ -1,6 +1,8 @@
 class ExpirationsController < ApplicationController
   before_action :set_expiration, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :is_advertiser?
+
   # GET /expirations
   # GET /expirations.json
   def index

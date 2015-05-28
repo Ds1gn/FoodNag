@@ -26,7 +26,9 @@ class Purchase < ActiveRecord::Base
  	Expiration.create(food_id: food.id, purchase_id: self.id)
  end
 
-
+ def self.view_by_zip
+ 	User.all.group_by(&:zip).map{ |zip, users| {zip => users.map(&:purchases).flatten.sort } }
+ end
  
 
 end

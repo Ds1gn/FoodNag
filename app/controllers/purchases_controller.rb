@@ -1,6 +1,8 @@
 class PurchasesController < ApplicationController
   before_action :set_purchase, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :is_advertiser?
+
   # GET /purchases
   # GET /purchases.json
   def index

@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
-
+<% Purchase.view_by_zip.each do |zip_hash| %>
+  <br>
+  <% zip_hash.each do |zip, purchases| %>
+    <strong><%= zip %></strong>
+    <br>
+    <% purchases.each do |purchase| %>
+      <%= purchase.food.name %>
+    <% end %>
+  <% end %>
+<% end %>
 <h1>Listing Foods</h1>
 
 <table>
