@@ -5,8 +5,9 @@ class PurchasesController < ApplicationController
   # GET /purchases.json
   def index
     @purchases = Purchase.all
-
-
+    @all_purchases = Purchase.with_deleted
+    # @food_names = Purchase.find(:food_id)
+    # @
   end
 
   # GET /purchases/1

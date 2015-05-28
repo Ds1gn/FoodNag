@@ -21,6 +21,10 @@ class Purchase < ActiveRecord::Base
  	Expiration.create(food_id: food.id, purchase_id: self.id)
  end
 
+ # def all_purchases
+ # 	Purchase.with_delete(food_id: food.id, purchase_id: self.id, user_id: user_id)
+ # end
+
 # def get_food_name
 # 	Purchase.all.each do |n|
 # 		n.name food_id

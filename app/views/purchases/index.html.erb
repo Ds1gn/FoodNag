@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
+
+
 
 <h1>Listing Purchases</h1>
+<h2>Foods</h2>
+<%= pie_chart @all_purchases.group(:food_id).count %>
+<h2>Users</h2>
+<%= pie_chart @all_purchases.group(:user_id).count %>
 
-<%= pie_chart @purchases.group(:food_id).count %>
-<%= pie_chart @purchases.group(:user_id).count %>
+
+
+
+
+
 <table>
   <thead>
     <tr>

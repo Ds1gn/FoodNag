@@ -10,7 +10,7 @@ class FoodCategoriesController < ApplicationController
 
 
     @purchases = current_user.purchases.all
-    # render layout: !request.xhr?
+    
   end
 
   # GET /food_categories/1
