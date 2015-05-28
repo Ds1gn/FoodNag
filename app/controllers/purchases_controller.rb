@@ -6,14 +6,11 @@ class PurchasesController < ApplicationController
   # GET /purchases
   # GET /purchases.json
   def index
-<<<<<<< HEAD
     @purchases = Purchase.all
     @all_purchases = Purchase.with_deleted
-    # @food_names = Purchase.find(:food_id)
+        # @food_names = Purchase.find(:food_id)
     # @
-=======
-    @purchases = current_user.Purchase.all
->>>>>>> e78f43e241f3f785ea3ea87e4c762b73b5a4679f
+
   end
 
   # GET /purchases/1
