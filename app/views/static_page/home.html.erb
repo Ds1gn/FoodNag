@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Food Nag</title>
+    <meta name="description" content="FoodNag">
+    <meta name="keywords" content="FoodNag">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+
+    <!-- // CSS Reset – http://meyerweb.com/eric/tools/css/reset/ -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite|open+sans|Monda' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="try3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="flipcounter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="logo.png">
+      </a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#Home">Home<span></a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <li class="divider"></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In<strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <form method="post" action="login" accept-charset="UTF-8">
+                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+                <label class="string optional" for="user_remember_me"> Remember me</label>
+                <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In"><br>
+              </form>
+            </div>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- /.nav End -->
+
+<div id="page-wrap">
+
+  <div id="page1">
+    <a name="Home"></a>
+  </div> <!--END page1-->
+
+  <!-- Waste Counter -->
+  <div id="waste-counter">
+    <h2>Food Waste in Pound Since You've Visited Us</h2>
+    <div class="clearfix">
+      <div class="counter-wrapper">
+        <ul class="flip-counter default" id="myCounter"></ul>
+      </div>
+    </div>
+  </div><!-- End of counter -->
+
+  <div id="page2">
+    <a name="About"></a>
+    <h1>About</h1>
+      <p class="about-nag">Food Nag is the ultimate food tracking app. Food Nag will save you money and keep your food feeling good. Here are some of our features provided by the Nag:</p>
+<!-- Features -->
+    <div id="table-responsive">
+      <table class="table">
+        <tr>
+          <td><i class="fa fa-pencil-square-o fa-lg"></i></td>
+          <td>
+            <p class="title">List Management</p>
+            <p class="text">Ability to create lists to stay up-to-date with all your foods</p>
+          </td>
+          <td><i class="fa fa-users fa-lg"></i></td>
+          <td>
+            <p class="title">Shared Accounts</p>
+            <p class="text">Multiple users in a single account keeps everyone in the loop</p>
+          </td>
+          <td><i class="fa fa-bell-o fa-lg"></i></td>
+          <td>
+            <p class="title">Reminders</p>
+            <p class="text">Create custom reminders expirary times for each food </p>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-flag fa-lg"></i></td>
+          <td>
+            <p class="title">Notifications</p>
+            <p class="text">Recieve sms or email notifications of soon to be expiring foods and offers</p>
+          </td>
+          <td><i class="fa fa-barcode fa-lg"></i></td>
+          <td>
+            <p class="title">Barcode Scanner</p>
+            <p class="text">Barcode scanner for quickly inputing food purchases</p>
+          </td>
+          <td><i class="fa fa-spoon fa-lg"></i></td>
+          <td>
+            <p class="title">Recipes</p>
+            <p class="text">Recipe suggestions based on soon to be expiring foods</p>
+          </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-money fa-lg"></i></td>
+          <td>
+            <p class="title">Special Offers</p>
+            <p class="text">Recieve coupons from local grocery stores</p>
+          </td>
+          <td><i class="fa fa-archive fa-lg"></i></td>
+          <td>
+            <p class="title">Purchase History</p>
+            <p class="text">Track food purchases forever</p>
+          </td>
+          <td><i class="fa fa-desktop fa-lg"></i></td>
+          <td>
+            <p class="title">Simple UX</p>
+            <p class="text">Great user experience optimized for your computer and mobile device</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div> <!--END page2-->
+
+  <div id="page3">
+    <a name="Contact"></a>
+    <h1>Team</h1>
+    <p class="team-nag">We are a multidisciplinary team of strategists, designers and entrepreneurs with a common interest in building products with purpose.</p>
+    <div class="team-grid">
+      <!--teammate 1 -->
+      <div class="grid-unit">
+        <div class="circular">
+          <img class="avatar" src="http://i.imgur.com/gaChLMa.jpg" title="Dan"/>
+        </div>
+        <h3>Dan</h3>
+        <p class="team-emph">Developer</p>
+        <p class="email"><a href="#">name@email.com</a></p>
+      </div>
+
+      <!--teammate 2 -->
+      <div class="grid-unit">
+        <div class="circular">
+          <img src="http://i.imgur.com/SMNLPcn.jpg" title="Mike"  class="avatar"/>
+        </div>
+        <h3>Mike</h3>
+        <p class="team-emph">Developer</p>
+        <p class="email"><a>name@email.com</a></p>
+      </div>
+
+      <!--teammate 3 -->
+      <div class="grid-unit">
+        <div class="circular">
+          <img src="http://i.imgur.com/gw7Votk.jpg" title="Ian" class="avatar"/>
+        </div>
+        <h3>Ian</h3>
+        <p class="team-emph">Developer</p>
+        <p class="email"><a>name@email.com</a></p>
+      </div>
+    </div>
+  </div> <!-- END page3 -->
+
+</div> <!--End of Page Wrapper -->
+<!--flipper -->
+<script>
+  $(function(){
+    var myCounter = new flipCounter('myCounter', {value: 1000, inc: 2200, pace: 500, auto: true});
+    $('#style-switcher a').on('click', function(e){
+      e.preventDefault();
+      $("#myCounter").removeClass().addClass('flip-counter '+$(this).data('style'));
+      $('#style-switcher a').removeClass('active');
+      $(this).addClass('active');
+    });
+    $('#inc_slider').slider({
+      range: 'max',
+      value: 123,
+      min: 0,
+      max: 1000,
+      slide: function(event, ui){
+        $('#inc_value').text(ui.value);
+        myCounter.setIncrement(ui.value);
+        if (ui.value == 0) myCounter.setAuto(false);
+        else myCounter.setAuto(true);
+      }
+    });
+// Pace
+    $('#pace_slider').slider({
+      range: 'max',
+      value: 1000,
+      min: 400,
+      max: 2000,
+      step: 100,
+      slide: function(event, ui){
+        myCounter.setPace(ui.value);
+        $("#pace_value").text(ui.value);
+      }
+    });
+  });
+</script>
+
+<!-- Login form -->
+<script>$(document).ready(function(){
+    //Handles menu drop down
+    $('.dropdown-menu').find('form').click(function (e) {
+        e.stopPropagation();
+    });
+});
+</script>
+
+<!-- Scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>$(document).ready(function() {
+  function filterPath(string) {
+    return string
+      .replace(/^\//,'')
+      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+      .replace(/\/$/,'');
+  }
+  $('a[href*=#]').each(function() {
+    if ( filterPath(location.pathname) == filterPath(this.pathname)
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+         $(this).click(function() {
+           $('html, body').animate({scrollTop: targetOffset}, 2000);
+           return false;
+         });
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

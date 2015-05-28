@@ -1,0 +1,211 @@
+// Place all the styles related to the static_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Navbar Styling */
+
+@media (max-width: 768px){
+  .navbar-nav li{
+    text-align: center;
+  }
+}
+
+.navbar-default {
+  background-color: black;
+  border-color: transparent;
+  height: 100px;
+}
+
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  opacity: 0.6;
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+  padding-top: 40px;
+  font-size: 24px;
+  font-family: 'Monda';
+  margin-right: 20px;
+  -webkit-text-stroke: 1px black;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFF19A;
+}
+
+/* add color to nav links on hover */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FFF19A;
+}
+
+/* remove color container from hover */
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #FFF19A;
+  background-color: transparent;
+}
+
+/* dropdown menu style */
+.dropdown-open {
+  background-color: #FFF;
+}
+
+/* logo container */
+.navbar-default .navbar-brand {
+  padding: 0 0 0 15px;
+  margin: 0 0 0 0;
+}
+
+/* logo */
+.navbar-default .navbar-brand img {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  width: 18em;
+  height: 6em;
+}
+
+div#waste-counter{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding-top: 0px;
+  border: 1px black;
+  background-color: #b9c2c2;
+}
+
+/* Header Page */
+div#page1 {
+  height: 700px;
+  width: 100%;
+  background: url(http://i.imgur.com/KbsPuq7.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
+  opacity: 4.8;
+}
+
+.about-nag {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  padding: 0 4em 0 4em;
+}
+
+
+/* About page */
+#page2 {
+  height:auto;
+  width:100%;
+  background:#FFFFFF;
+  padding-top: 20px;
+}
+.about-nag {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  padding: 0 4em 0 4em;
+}
+
+.title {
+  font-weight: bold;
+}
+
+
+
+/* Contact */
+#page3 {
+  height:700px;
+  width:100%;
+  background:#FFFFFF;
+}
+
+.team-nag{
+  text-align: center;
+  padding: 0 4em 0 4em;
+  font-size: 1.5em;
+  margin: 4em 0 4em 0;
+
+}
+
+/* body stylessss */
+
+h2 {
+  text-align: center;
+  padding: 0px;
+  color: #FFF;
+}
+
+div.wrapper {
+   width: 1280px;
+   margin: 0 auto;
+}
+
+div.grid-unit {
+   position: relative;
+   width: 33.33%;
+   float: left;
+   display: inline;
+   margin: 0px 0px 1.8em 0px;
+   text-align: center;
+}
+
+div.circle:after {
+   -webkit-border-radius: 50%;
+   -o-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   content: "";
+   display: block;
+   width: 90%;
+   height: 0;
+   padding-bottom: 100%;
+   border: 1px solid #d4d4d4;
+   border-radius: 50%;
+}
+
+img {
+   width: auto;
+   max-width: 80%;
+   vertical-align: top;
+   height: auto;
+   margin: 0;
+}
+
+section.team {
+   padding: 5.625em 0;
+   text-align: center;
+}
+
+p.team-emph {
+   font-size: 1.5em;
+   line-height: 1.25em;
+   margin: 0 0 0 0;
+   margin-bottom: 0;
+}
+
+p.team-emph a {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+div.circular {
+   width: 100%;
+   height: auto;
+   margin: 0 0 1.875em 0;
+   padding: 0 3.125em;
+}
+
+img.avatar {
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   border: 0.313em solid #d4d4d4;
+}
+
+div#table-responsive {
+  margin: 0 4em 0 4em;
+}
+
