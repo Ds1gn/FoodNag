@@ -1,2 +1,11 @@
 <h1>Advertisers#index</h1>
 <p>Find me in app/views/advertisers/index.html.erb</p>
+
+
+<%= form_tag zip_path(), method: :get do %>
+<%= text_field_tag :zip %>
+<%= submit_tag("Save Data", name: "") %>
+<% end %>
+
+<h2>Foods</h2>
+<%= pie_chart @all_purchases.group(:food_id).count %>

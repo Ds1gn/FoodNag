@@ -36,7 +36,7 @@ class Purchase < ActiveRecord::Base
 
 
  def self.view_by_zip
- 	User.all.group_by(&:zip).map{ |zip, users| {zip => users.map(&:purchases).flatten.sort } }
+ 	@blah = User.all.group_by(&:zip).map{ |zip, users| {zip => users.map(&:purchases).flatten.sort } }
  end
  
 # def get_food_name

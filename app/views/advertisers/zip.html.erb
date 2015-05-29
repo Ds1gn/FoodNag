@@ -1,6 +1,6 @@
 <h1>Advertisers#showo</h1>
 <p>You typed <%= @zipcode %></p>
 
-<% @purchases.each do |purchase| %>
+<% @purchases_by_zip.each do |purchase| %>
 	<p><%= purchase.food.name %></p>
 <% end %>

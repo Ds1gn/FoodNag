@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   get 'advertisers' => 'advertisers#dashboard'
-  get 'advertisers/:zip' => 'advertisers#zip', as: :zip
+  get 'advertisers/zip' => 'advertisers#zip', as: :zip
 
   get 'recipe/ingredient'
 
@@ -24,9 +24,8 @@ Rails.application.routes.draw do
 
   post 'results' => 'recipe#results'
 
- authenticated :user do
+
   root :to => 'static_page#home'
-end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
