@@ -38,13 +38,17 @@ class PurchasesController < ApplicationController
   # POST /purchases.json
   def create
     @purchase = current_user.purchases.new(purchase_params)
-    @display = Recipe.get_recipes(params[:ingredient])
+
 
     respond_to do |format|
-      if @purchase.save
-        
+      if @purchase.save 
         format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
-        format.json { render :show, status: :created, location: @purchase }
+        format.json { 
+          @ingredient = @purchase.food.name
+          @display = Recipe.get_recipes(@ingredient)
+          # render :show, status: :created, location: @purchase
+          render json: { recipe: @display["label"], purchase_id: @purchase.id }
+        }
       else
         format.html { render :new }
         format.json { render json: @purchase.errors, status: :unprocessable_entity }
@@ -80,6 +84,10 @@ class PurchasesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+  def show_recipe
+
+  end
+
     def set_purchase
       @purchase = Purchase.find(params[:id])
     end

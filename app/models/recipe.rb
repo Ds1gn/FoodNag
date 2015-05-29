@@ -9,7 +9,7 @@
 
 class Recipe < ActiveRecord::Base
 require 'Unirest'
-belongs_to :purchases
+belongs_to :purchase
 
 
 
@@ -26,6 +26,11 @@ belongs_to :purchases
 		recipe_result["hits"][0]["recipe"]
 
 	end
+
+
+
+
+	
 
 	def self.get_recipes2(ingredient, ingredient1)
 # These code snippets use an open-source library. http://unirest.io/ruby

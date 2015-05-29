@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Food Nag</title>
-    <meta name="description" content="FoodNag">
-    <meta name="keywords" content="FoodNag">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-
-    <!-- // CSS Reset – http://meyerweb.com/eric/tools/css/reset/ -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite|open+sans|Monda' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="try3.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="flipcounter.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  </head>
-
-<body>
-
-<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -37,14 +14,25 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
+       <div id="container">
+    <div id="user_nav">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.first_name %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> |
+      
+    <% end %>
+    </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#Home">Home<span></a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
         <li class="divider"></li>
           <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In<strong class="caret"></strong></a>
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign<strong class="caret"></strong></a>
             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
               <form method="post" action="login" accept-charset="UTF-8">
                 <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
@@ -81,6 +69,48 @@
     <h1>About</h1>
       <p class="about-nag">Food Nag is the ultimate food tracking app. Food Nag will save you money and keep your food feeling good. Here are some of our features provided by the Nag:</p>
 <!-- Features -->
+
+  <section class="content-primary home">
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <p><i class="fa fa-pencil-square-o fa-lg"></i></p>
+        <p class="title">List Management</p>
+        <p class="text">Ability to create lists to stay up-to-date with all your foods</p>
+      </div>
+
+      <div class="col-md-4">
+        <p><i class="fa fa-users fa-lg"></i></p>
+        <p class="title">Shared Accounts</p>
+        <p class="text">Multiple users in a single account keeps everyone in the loop</p>
+      </div> 
+      <div class="col-md-4">
+      <p><i class="fa fa-bell-o fa-lg"></i></p>
+        <p class="title">Reminders</p>
+        <p class="text">Create custom reminders expirary times for each food </p>     
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+      <p><i class="fa fa-flag fa-lg"></i></p>
+      <p class="title">Notifications</p>
+      <p class="text">Recieve sms or email notifications of soon to be expiring foods and offers</p>
+      </div>
+      <div class="col-md-4">
+      <i class="fa fa-barcode fa-lg"></i></p>
+        <p class="title">Barcode Scanner</p>
+        <p class="text">Barcode scanner for quickly inputing food purchases</p>
+      </div>
+      <div class="col-md-4">
+      <p><i class="fa fa-spoon fa-lg"></i></p>
+      <p class="title">Recipes</p>
+      <p class="text">Recipe suggestions based on soon to be expiring foods</p> 
+      </div>
+    </div>
+  </section>
+
+
     <div id="table-responsive">
       <table class="table">
         <tr>
@@ -248,5 +278,3 @@
   });
 });
 </script>
-</body>
-</html>

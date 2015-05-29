@@ -2,6 +2,25 @@
 <html>
 <head>
   <title>Foodt</title>
+    <meta charset="utf-8">
+    <title>Food Nag</title>
+    <meta name="description" content="FoodNag">
+    <meta name="keywords" content="FoodNag">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+
+    <!-- // CSS Reset – http://meyerweb.com/eric/tools/css/reset/ -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite|open+sans|Monda' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="try3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="flipcounter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'application' %>
@@ -9,17 +28,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="container">
-    <div id="user_nav">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.first_name %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-    </div>
+ 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
