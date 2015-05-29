@@ -8,10 +8,8 @@ class FoodCategoriesController < ApplicationController
   # GET /food_categories.json
   def index
     @food_categories = FoodCategory.all
-
-
     @purchases = current_user.purchases.all
-    
+    # @recipe = Recipe.get_recipes
   end
 
   # GET /food_categories/1
