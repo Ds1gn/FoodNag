@@ -4,3 +4,5 @@
 <% @purchases_by_zip.each do |purchase| %>
 	<p><%= purchase.food.name %></p>
 <% end %>
+
+<%= pie_chart @purchases_by_zip.joins(:food).group('foods.name').count %>
