@@ -1,7 +1,6 @@
 class RecipeController < ApplicationController
 
   def ingredient
-  	
   end
 
   def results

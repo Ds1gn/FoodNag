@@ -1,5 +1,6 @@
 class AdvertisersController < ApplicationController
   def dashboard
+
   end
 
   def zip

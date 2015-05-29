@@ -16,6 +16,7 @@ class Purchase < ActiveRecord::Base
   belongs_to :food
   belongs_to :user
   has_one :expiration
+  has_many :recipes
 
   after_create :set_expiration
 
@@ -38,6 +39,11 @@ class Purchase < ActiveRecord::Base
  def self.view_by_zip
  	@blah = User.all.group_by(&:zip).map{ |zip, users| {zip => users.map(&:purchases).flatten.sort } }
  end
+
+ def get_purchase
+	Purchase.find(created_at: Time.now)
+ end
+
  
 # def get_food_name
 # 	Purchase.all.each do |n|

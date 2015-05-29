@@ -8,6 +8,11 @@ class PurchasesController < ApplicationController
   def index
     @purchases = Purchase.all
     @all_purchases = Purchase.with_deleted
+    
+    # @food = @all_purchases.food
+
+    # raise "hell"
+    # @all_purchases_names = @all_purchases.food.name
         # @food_names = Purchase.find(:food_id)
     # @
 
@@ -33,9 +38,11 @@ class PurchasesController < ApplicationController
   # POST /purchases.json
   def create
     @purchase = current_user.purchases.new(purchase_params)
+    @display = Recipe.get_recipes(params[:ingredient])
 
     respond_to do |format|
       if @purchase.save
+        
         format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
         format.json { render :show, status: :created, location: @purchase }
       else
@@ -66,7 +73,7 @@ class PurchasesController < ApplicationController
   def destroy
     @purchase.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Purchase was successfully destroyed.' }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
