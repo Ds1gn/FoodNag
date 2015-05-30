@@ -1,9 +1,9 @@
-  <nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img alt="Brand" src="logo.png">
+        <img alt="Brand" src="http://i.imgur.com/jUH1GEK.png"/>
       </a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -14,25 +14,14 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
-       <div id="container">
-    <div id="user_nav">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.first_name %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      
-    <% end %>
-    </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#Home">Home<span></a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Contact">Contact</a></li>
-        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><a href="#">Sign Up</a></li>
         <li class="divider"></li>
           <li class="dropdown">
-          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign<strong class="caret"></strong></a>
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In<strong class="caret"></strong></a>
             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
               <form method="post" action="login" accept-charset="UTF-8">
                 <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
@@ -56,18 +45,13 @@
 
   <!-- Waste Counter -->
   <div id="waste-counter">
-    <h2>Food Waste in Pound Since You've Visited Us</h2>
+    <h2>Food Waste in Pound Since Page Load</h2>
     <div class="clearfix">
       <div class="counter-wrapper">
         <ul class="flip-counter default" id="myCounter"></ul>
       </div>
     </div>
   </div><!-- End of counter -->
-
-  <div id="page2">
-    <a name="About"></a>
-    <h1>About</h1>
-      <p class="about-nag">Food Nag is the ultimate food tracking app. Food Nag will save you money and keep your food feeling good. Here are some of our features provided by the Nag:</p>
 <!-- Features -->
 
   <section class="content-primary home">
@@ -83,11 +67,11 @@
         <p><i class="fa fa-users fa-lg"></i></p>
         <p class="title">Shared Accounts</p>
         <p class="text">Multiple users in a single account keeps everyone in the loop</p>
-      </div> 
+      </div>
       <div class="col-md-4">
       <p><i class="fa fa-bell-o fa-lg"></i></p>
         <p class="title">Reminders</p>
-        <p class="text">Create custom reminders expirary times for each food </p>     
+        <p class="text">Create custom reminders expirary times for each food </p>
       </div>
     </div>
     <hr>
@@ -105,7 +89,7 @@
       <div class="col-md-4">
       <p><i class="fa fa-spoon fa-lg"></i></p>
       <p class="title">Recipes</p>
-      <p class="text">Recipe suggestions based on soon to be expiring foods</p> 
+      <p class="text">Recipe suggestions based on soon to be expiring foods</p>
       </div>
     </div>
   </section>
@@ -167,6 +151,14 @@
       </table>
     </div>
   </div> <!--END page2-->
+
+ <!-- Callout -->
+  <div class="callout">
+    <div class="inner-container">
+      <h2>Fun Food Waste Fact</h2>
+    </div>
+  </div>
+  <!-- End Callout -->
 
   <div id="page3">
     <a name="Contact"></a>
@@ -278,3 +270,5 @@
   });
 });
 </script>
+</body>
+</html>
