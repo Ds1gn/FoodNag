@@ -17,12 +17,21 @@
   <% @purchases.each do |p| %>
     <li>
       <%= p.food.name || "None" %>
-      <%= p.recipe.recipe_title %>
       <%= link_to 'delete', purchase_path(p), method: :delete %>
     </li>
   <% end %>
 </ul>
 <br>
+
+<ul class="recipe-column">
+  <% @purchases.each do |r| %>
+	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
+	</li>
+	<li>
+	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
+	</li>
+<% end %>
+
 
 <!-- <% @purchases.each do |p| %>
 <%= p.food.name %>

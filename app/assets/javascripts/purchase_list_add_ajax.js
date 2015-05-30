@@ -16,9 +16,10 @@ ready = function(){
       console.log(data);
      
       var purchaseItemHtml = "<li>" + foodName + ' <a rel="nofollow" data-method="delete" href="/purchases/'+data.purchase_id+'">delete</a></li>'
-
+      var recipeData = "<li>" +  '<a href="'+data.recipe_url+'">' + data.recipe_title + '<img src="'+data.recipe_image+'">' + '</a></li>'
+      
       $('.purchase_list').append(purchaseItemHtml);
-      $('.purchase_list').append(data.recipe_title);
+      $('.recipe-column').append(recipeData);
       // $('#purchase').focus();
       // location.reload();
     }).error(function(error, response){

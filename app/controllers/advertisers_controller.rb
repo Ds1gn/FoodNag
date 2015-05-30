@@ -5,7 +5,7 @@ class AdvertisersController < ApplicationController
 
   def zip
   	@zipcode = params[:zip]
-  	@purchases_by_zip = Purchase.zip(@zipcode)
+  	@purchases_by_zip = Purchase.with_deleted.zip(@zipcode)
 
   end
 
