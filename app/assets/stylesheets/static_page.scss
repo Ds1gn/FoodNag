@@ -2,23 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* Navbar Styling */
-
-@media (max-width: 768px){
-  .navbar-nav li{
-    text-align: center;
-  }
-}
-
 .navbar-default {
   background-color: black;
   border-color: transparent;
   height: 100px;
+  opacity: 0.4;
 }
 
 nav.navbar.navbar-default {
   margin-bottom: 0;
   padding-bottom: 0;
   opacity: 0.6;
+}
+
+div.dropdown-menu {
+  background-color: #fff;
 }
 
 /* link */
@@ -67,19 +65,26 @@ nav.navbar.navbar-default {
 }
 
 div#waste-counter{
-  margin-top: 0px;
-  margin-bottom: 50px;
-  padding-top: 0px;
+  margin: 0 0 0 0;
+  padding: 4em 0 4em 0;
   border: 1px black;
-  background-color: #b9c2c2;
+  background-color: #A5DFDF;
+}
+
+.callout {
+  height:263px;
+  width:1280px;
+  background-color: #A5DFDF;
+}
+
+.inner-container {
+  padding-top:5.5em;
 }
 
 /* Header Page */
 div#page1 {
-  display:block;
-  max-width:100%;
-  height:auto;
   height: 700px;
+  width: 100%;
   background: url(http://i.imgur.com/KbsPuq7.jpg) no-repeat center center fixed;
   background-size: cover;
   background-color: black;
@@ -112,8 +117,6 @@ div#page1 {
   font-weight: bold;
 }
 
-
-
 /* Contact */
 #page3 {
   height:700px;
@@ -125,15 +128,19 @@ div#page1 {
   text-align: center;
   padding: 0 4em 0 4em;
   font-size: 1.5em;
-  margin: 4em 0 4em 0;
-
+  margin: 2em 0 2em 0;
 }
 
 /* body stylessss */
+h1 {
+  margin: 0 0 0 0;
+  padding: 1em 0 0 0;
+}
 
 h2 {
   text-align: center;
-  padding: 0px;
+  padding: 1em 0 1em 0;
+  margin: 0 0 0 0;
   color: #FFF;
 }
 
@@ -182,7 +189,6 @@ p.team-emph {
    font-size: 1.5em;
    line-height: 1.25em;
    margin: 0 0 0 0;
-   margin-bottom: 0;
 }
 
 p.team-emph a {
@@ -210,4 +216,3 @@ img.avatar {
 div#table-responsive {
   margin: 0 4em 0 4em;
 }
-
