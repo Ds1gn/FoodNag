@@ -18,9 +18,11 @@ ready = function(){
       var purchaseItemHtml = "<li>" + foodName + ' <a rel="nofollow" data-method="delete" href="/purchases/'+data.purchase_id+'">delete</a></li>'
 
       $('.purchase_list').append(purchaseItemHtml);
-      $('body').append(data.recipe);
+      $('.purchase_list').append(data.recipe_title);
       // $('#purchase').focus();
       // location.reload();
+    }).error(function(error, response){
+      console.log(error, response);
     });
   })
 }

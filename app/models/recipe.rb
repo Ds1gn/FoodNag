@@ -10,6 +10,7 @@
 class Recipe < ActiveRecord::Base
 require 'Unirest'
 belongs_to :purchase
+# after_create :update_purchase_id
 
 
 
@@ -23,14 +24,32 @@ belongs_to :purchase
 		
 		recipe_result = response.body
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
-		recipe_result["hits"][0]["recipe"]
+		recipe_data = recipe_result["hits"][0]["recipe"]
+		
+		recipe_title = recipe_data["label"]
+		recipe_image = recipe_data["image"]
+		recipe_url = recipe_data["url"]
+
+		Recipe.create(
+			recipe_title: recipe_title, recipe_image: recipe_image, recipe_url: recipe_url
+			)
+
+
 
 	end
 
+  # def update_purchase_id
+  # 	self.update(purchase_id: current_user.purchases.last.id)
+  # end
+
+  def recipe_with_purchase(purchase)
+
+  	self.purchase_id = purchase.id
+  	self.save
+  end
 
 
 
-	
 
 	def self.get_recipes2(ingredient, ingredient1)
 # These code snippets use an open-source library. http://unirest.io/ruby

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527213259) do
+ActiveRecord::Schema.define(version: 20150530162905) do
 
   create_table "expirations", force: :cascade do |t|
     t.integer  "food_id"
@@ -69,9 +69,17 @@ ActiveRecord::Schema.define(version: 20150527213259) do
   add_index "purchases", ["user_id"], name: "index_purchases_on_user_id"
 
   create_table "recipes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "purchase_id"
+    t.string   "recipe_title"
+    t.string   "recipe_label"
+    t.string   "recipe_image"
+    t.string   "recipe_url"
+    t.string   "recipe_ingredient"
   end
+
+  add_index "recipes", ["purchase_id"], name: "index_recipes_on_purchase_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

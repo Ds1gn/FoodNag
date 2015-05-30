@@ -9,6 +9,7 @@ class FoodCategoriesController < ApplicationController
   def index
     @food_categories = FoodCategory.all
     @purchases = current_user.purchases.all
+    @display
     # @recipe = Recipe.get_recipes
   end
 

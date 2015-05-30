@@ -17,10 +17,13 @@
   <% @purchases.each do |p| %>
     <li>
       <%= p.food.name || "None" %>
+      <%= p.recipe.recipe_title %>
       <%= link_to 'delete', purchase_path(p), method: :delete %>
     </li>
   <% end %>
 </ul>
 <br>
 
-<!--  -->
+<!-- <% @purchases.each do |p| %>
+<%= p.food.name %>
+<% end %> -->

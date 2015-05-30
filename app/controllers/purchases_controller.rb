@@ -8,13 +8,6 @@ class PurchasesController < ApplicationController
   def index
     @purchases = Purchase.all
     @all_purchases = Purchase.with_deleted
-    
-    # @food = @all_purchases.food
-
-    # raise "hell"
-    # @all_purchases_names = @all_purchases.food.name
-        # @food_names = Purchase.find(:food_id)
-    # @
 
   end
 
@@ -38,7 +31,7 @@ class PurchasesController < ApplicationController
   # POST /purchases.json
   def create
     @purchase = current_user.purchases.new(purchase_params)
-
+    # @display = Recipe.get_recipes(@ingredient)
 
     respond_to do |format|
       if @purchase.save 
@@ -46,8 +39,13 @@ class PurchasesController < ApplicationController
         format.json { 
           @ingredient = @purchase.food.name
           @display = Recipe.get_recipes(@ingredient)
+          @display.recipe_with_purchase(@purchase)
           # render :show, status: :created, location: @purchase
-          render json: { recipe: @display["label"], purchase_id: @purchase.id }
+          render json: { 
+            recipe_title: @display.recipe_title,
+            recipe_image: @display.recipe_image,
+            recipe_url: @display.recipe_url,
+             purchase_id: @purchase.id }
         }
       else
         format.html { render :new }
@@ -84,9 +82,7 @@ class PurchasesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-  def show_recipe
 
-  end
 
     def set_purchase
       @purchase = Purchase.find(params[:id])
