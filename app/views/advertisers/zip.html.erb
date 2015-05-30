@@ -1,8 +1,6 @@
-<h1>Advertisers#showo</h1>
-<p>You typed <%= @zipcode %></p>
 
-<% @purchases_by_zip.each do |purchase| %>
-	<p><%= purchase.food.name %></p>
-<% end %>
+<h1>Purchases for zipcode: <%= @zipcode %></h1>
+<h2>Total purchases: <%= @purchases_by_zip.size %></h2>
+
 
 <%= pie_chart @purchases_by_zip.joins(:food).group('foods.name').count %>
