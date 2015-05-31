@@ -1,19 +1,22 @@
-
 <h1>Choose Your Items</h1>
+<div>
+  </div><!-- the wrapper -->
+<!--   <nav id="my-menu">
+  <ul class="vertical">
+  <% @food_categories.each do |fc| %>
+    <li><%= fc.name %>:</li>
+      <% fc.foods.each do |f| %>
+      <ul>
+        <li>
+          <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+        </li>
+      </ul>
+  <% end %>
+  <% end %>
+  </nav> -->
 
 
-
-<% @food_categories.each do |fc| %>
-<%= fc.name %>: 
-<% fc.foods.each do |f| %>
-
-<span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-
-<% end %>
-<br>
-<% end %>
-
-<ul class="purchase_list">
+<!-- <ul class="purchase_list">
   <% @purchases.each do |p| %>
     <li>
       <%= p.food.name || "None" %>
@@ -21,7 +24,29 @@
     </li>
   <% end %>
 </ul>
-<br>
+<br> -->
+ 
+<div id="menu">
+  <nav>
+    <h2><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2>
+    <ul>
+      <% @food_categories.each do |fc| %>
+        <li>
+          <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+            <ul>
+              <% fc.foods.each do |f| %>
+              <li>
+                
+                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                     <% end %>
+              </li>
+            </ul>
+        </li>
+  <% end %>
+        </li>
+    </ul>
+  </nav>
+</div>
 
 <ul class="recipe-column">
   <% @purchases.each do |r| %>
@@ -33,6 +58,25 @@
 <% end %>
 
 
-<!-- <% @purchases.each do |p| %>
-<%= p.food.name %>
-<% end %> -->
+
+<!-- 
+<script>
+ready = function(){
+
+$(document).ready(function() {
+      $("#my-menu").mmenu({
+         // options
+      }, {
+         // configuration
+         classNames: {
+            vertical: "expand"
+         }
+      });
+   });
+
+
+$(document).ready(e);
+$(document).on('page:load', ready);
+</script>
+
+ -->

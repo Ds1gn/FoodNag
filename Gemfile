@@ -58,5 +58,6 @@ group :development, :test do
   gem 'hightop'
   gem 'active_median'
   gem 'groupdate'
+  gem 'mmenu-rails'
 end
 
