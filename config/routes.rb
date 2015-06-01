@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+
+  get 'advertisers' => 'advertisers#dashboard'
+  get 'advertisers/zip' => 'advertisers#zip', as: :zip
+  get 'recipe' => 'recipe#recipeslist'
+
+  get 'recipe/ingredient'
+
   resources :expirations
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   resources :purchases
@@ -12,8 +20,10 @@ Rails.application.routes.draw do
   # end
   post '/purchase/:id' => 'foods#purchase', as: :purchase_food
 
-  root to: 'foods#index'
+  # post '/purchase/:id' => 'purchase#new', as: :purchase_food
 
+root :to => 'static_page#home'
+  post 'results' => 'recipe#results'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

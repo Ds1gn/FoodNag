@@ -1,6 +1,17 @@
-<p id="notice"><%= notice %></p>
+
+
 
 <h1>Listing Purchases</h1>
+<h2>Foods</h2>
+<!-- to display the food names this was done: @all_purchases contains deleted and active purchases .joins grabs the food model with purchases and then is grouped to connect purchases and foods...'foods.name' calls out the name of food so it can be displayed...something like that -->
+<%= pie_chart @all_purchases.joins(:food).group('foods.name').count %>
+<h2>Users</h2>
+<%= pie_chart @all_purchases.group(:user_id).count %>
+
+
+
+
+
 
 <table>
   <thead>

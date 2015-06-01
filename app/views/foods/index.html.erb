@@ -1,6 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<% Purchase.view_by_zip.each do |zip_hash| %>
+  <br>
+  <% zip_hash.each do |zip, purchases| %>
+    <strong><%= zip %></strong>
+    <br>
+    <% purchases.each do |purchase| %>
+      <%= purchase.food.name %>
+    <% end %>
+  <% end %>
+<% end %>
 <h1>Listing Foods</h1>
+
+
 
 <table>
   <thead>
@@ -20,7 +32,6 @@
         <td><%= food.shelf_life %></td>
         <td><%= link_to 'Show', food %></td>
         <td><%= link_to 'Edit', edit_food_path(food) %></td>
-        <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,5 +1,7 @@
 class FoodUsersController < ApplicationController
   before_action :set_food_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :is_advertiser?
 
   # GET /food_users
   # GET /food_users.json
@@ -73,4 +75,5 @@ class FoodUsersController < ApplicationController
     def food_user_params
       params.require(:food_user).permit(:user_id, :food_id, :custom_reminder)
     end
+  
 end

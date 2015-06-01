@@ -1,9 +1,30 @@
+# == Schema Information
+#
+# Table name: purchases
+#
+#  id            :integer          not null, primary key
+#  purchase_date :date
+#  food_id       :integer
+#  user_id       :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
 class Purchase < ActiveRecord::Base
+  acts_as_paranoid
+
   belongs_to :food
   belongs_to :user
   has_one :expiration
+  has_one :recipe, dependent: :destroy
 
   after_create :set_expiration
+
+  scope :meats, -> { joins(:food).where(foods: {food_category_id: 3})}
+  scope :vegetable, -> { joins(:food).where(foods: {food_category_id: 2})}
+  scope :fruits, -> { joins(:food).where(foods: {food_category_id: 1})}
+  scope :zip, ->(zip) { joins(:user).where(users: {zip: zip}) }
+
 
 
  def food_user
@@ -14,5 +35,13 @@ class Purchase < ActiveRecord::Base
  	Expiration.create(food_id: food.id, purchase_id: self.id)
  end
 
- 
+
+ def self.view_by_zip
+ 	@blah = User.all.group_by(&:zip).map{ |zip, users| {zip => users.map(&:purchases).flatten.sort } }
+ end
+
+
+
+
+
 end

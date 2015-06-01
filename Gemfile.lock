@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    active_median (0.1.2)
+      activerecord
     activejob (4.2.1)
       activesupport (= 4.2.1)
       globalid (>= 0.3.0)
@@ -36,6 +38,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
+    annotate (2.6.10)
+      activerecord (>= 3.2, <= 4.3)
+      rake (~> 10.4)
     arel (6.0.0)
     autoprefixer-rails (5.1.11)
       execjs
@@ -53,7 +59,11 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+<<<<<<< HEAD
     cancancan (1.10.1)
+=======
+    chartkick (1.3.2)
+>>>>>>> 93d75143956cc93b4045ad76bf103c342e4575d7
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -73,8 +83,14 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.5.2)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    groupdate (2.4.0)
+      activesupport (>= 3)
+    hightop (0.1.2)
+      activerecord
     i18n (0.7.0)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
@@ -91,10 +107,14 @@ GEM
     mime-types (2.5)
     mini_portile (0.6.2)
     minitest (5.6.1)
+    mmenu-rails (0.0.2)
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    paranoia (2.1.2)
+      activerecord (~> 4.0)
+    pg (0.18.1)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -126,6 +146,8 @@ GEM
     rdoc (4.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.4.13)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -154,6 +176,10 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unirest (1.1.2)
+      addressable (~> 2.3.5)
+      json (~> 1.8.1)
+      rest-client (~> 1.6.7)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.1.2)
@@ -166,16 +192,28 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_median
+  annotate (~> 2.6.6)
   autoprefixer-rails
   better_errors
   binding_of_caller
   bootstrap-sass
   byebug
+<<<<<<< HEAD
   cancancan
+=======
+  chartkick
+>>>>>>> 93d75143956cc93b4045ad76bf103c342e4575d7
   coffee-rails (~> 4.1.0)
   devise
+  font-awesome-rails
+  groupdate
+  hightop
   jbuilder (~> 2.0)
   jquery-rails
+  mmenu-rails
+  paranoia
+  pg
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -183,4 +221,8 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  unirest
   web-console (~> 2.0)
+
+BUNDLED WITH
+   1.10.2

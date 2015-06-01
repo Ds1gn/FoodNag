@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521224809) do
+ActiveRecord::Schema.define(version: 20150530162905) do
 
   create_table "expirations", force: :cascade do |t|
     t.integer  "food_id"
@@ -61,18 +61,33 @@ ActiveRecord::Schema.define(version: 20150521224809) do
     t.integer  "user_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.datetime "deleted_at"
   end
 
+  add_index "purchases", ["deleted_at"], name: "index_purchases_on_deleted_at"
   add_index "purchases", ["food_id"], name: "index_purchases_on_food_id"
   add_index "purchases", ["user_id"], name: "index_purchases_on_user_id"
 
+  create_table "recipes", force: :cascade do |t|
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "purchase_id"
+    t.string   "recipe_title"
+    t.string   "recipe_label"
+    t.string   "recipe_image"
+    t.string   "recipe_url"
+    t.string   "recipe_ingredient"
+  end
+
+  add_index "recipes", ["purchase_id"], name: "index_recipes_on_purchase_id"
+
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -83,6 +98,9 @@ ActiveRecord::Schema.define(version: 20150521224809) do
     t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
+    t.boolean  "admin",                  default: false
+    t.boolean  "advertiser",             default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

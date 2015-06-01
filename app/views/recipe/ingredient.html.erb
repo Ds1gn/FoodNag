@@ -1,0 +1,21 @@
+<h1>ingredient</h1>
+<%= form_tag results_path do %>
+<%= text_field_tag :ingredient %>
+<%= text_field_tag :ingredient1 %>
+<%= text_field_tag :ingredient2 %> 
+<%= submit_tag("Save Data") %>
+
+<% end %>
+<h2>Suggested Recipes based on your purchases</h2>
+
+	
+<% @purchases.each do |r| %>  
+ <div id="wrapper-recipe">
+<div id="columns-recipe">
+	  <p><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %></p>
+	  	<div class="pin">
+	  <p><%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %></p>
+	</div>
+	</div>
+  </div>
+<% end %>
