@@ -15,3 +15,21 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+ready = function(){
+	
+	// setInterval(function(){
+	// 	getTasks();
+	// }, 5000);
+
+	$('body').on('ajax:complete', '#new_task', function(xhr, obj){
+		console.dir(arguments);
+		console.log(obj.responseText);
+		$('body').html(obj.responseText);
+		$('#task_goal').focus()
+	});
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
