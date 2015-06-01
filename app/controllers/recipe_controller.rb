@@ -2,6 +2,7 @@ class RecipeController < ApplicationController
 
 
   def ingredient
+    @purchases = Purchase.all
   end
 
   def show_recipes

@@ -43,7 +43,7 @@ class PurchasesController < ApplicationController
           # render :show, status: :created, location: @purchase
           render json: { 
             recipe_title: @display.recipe_title,
-            recipe_image: @display.recipe_image,
+            # recipe_image: @display.recipe_image,
             recipe_url: @display.recipe_url,
              purchase_id: @purchase.id }
         }

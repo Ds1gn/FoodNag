@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'advertisers' => 'advertisers#dashboard'
   get 'advertisers/zip' => 'advertisers#zip', as: :zip
+  get 'recipe' => 'recipe#recipeslist'
 
   get 'recipe/ingredient'
 

@@ -59,5 +59,6 @@ group :development, :test do
   gem 'active_median'
   gem 'groupdate'
   gem 'mmenu-rails'
+  gem 'font-awesome-rails'
 end
 

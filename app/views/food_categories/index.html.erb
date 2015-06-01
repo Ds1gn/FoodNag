@@ -1,22 +1,67 @@
-<h1>Choose Your Items</h1>
-<div>
-  </div><!-- the wrapper -->
-<!--   <nav id="my-menu">
-  <ul class="vertical">
-  <% @food_categories.each do |fc| %>
-    <li><%= fc.name %>:</li>
-      <% fc.foods.each do |f| %>
+
+<!-- <div class="outer-wrapper">
+  <div class="wrapper">
+    <header>
+      <h1>Choose Your Items</h1>
+      <i class="fa fa-bars nav-toggle"></i>
+      <nav class="main-navigation">
+        <span class="nav-toggle">Close</span>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Produce</a></li>
+          <li><a href="">Body</a></li>
+          <li><a href="">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main> -->
+
+<body class="open">
+    <div class="nav">
       <ul>
-        <li>
-          <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-        </li>
+        <% @food_categories.each do |fc| %>
+          <li>
+            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+              <ul>
+                <% fc.foods.each do |f| %>
+                <li>
+                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                     <% end %>
+                </li>
+              </ul>
+          </li>
+          <% end %>
+          </li>
       </ul>
-  <% end %>
-  <% end %>
-  </nav> -->
+    </div>
+</body>
+
+      <!-- <div class="nav-fruit">
+      <ul>
+        <% @food_categories.each do |fc| %>
+          <li>
+            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+              <ul>
+                <% fc.foods.each do |f| %>
+                <li>
+                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                     <% end %>
+                </li>
+              </ul>
+          </li>
+          <% end %>
+          </li>
+      </ul>
+    </div> -->
+
+    <div class="main">
+      <p class="button">
+        open
+      </p>
+    </div>
 
 
-<!-- <ul class="purchase_list">
+<ul class="purchase_list">
   <% @purchases.each do |p| %>
     <li>
       <%= p.food.name || "None" %>
@@ -24,57 +69,85 @@
     </li>
   <% end %>
 </ul>
-<br> -->
- 
-<div id="menu">
-  <nav>
-    <h2><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2>
-    <ul>
-      <% @food_categories.each do |fc| %>
-        <li>
-          <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-            <ul>
-              <% fc.foods.each do |f| %>
-              <li>
-                
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-              </li>
-            </ul>
-        </li>
-  <% end %>
-        </li>
-    </ul>
-  </nav>
-</div>
-
-<ul class="recipe-column">
-  <% @purchases.each do |r| %>
-	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
-	</li>
-	<li>
-	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
-	</li>
-<% end %>
-
-<!-- 
-<script>
-ready = function(){
-
-$(document).ready(function() {
-      $("#my-menu").mmenu({
-         // options
-      }, {
-         // configuration
-         classNames: {
-            vertical: "expand"
-         }
-      });
-   });
+<br>
 
 
-$(document).ready(e);
-$(document).on('page:load', ready);
-</script>
 
- -->
+
+    <!-- the wrapper -->
+  <!--   <nav id="my-menu">
+    <ul class="vertical">
+    <% @food_categories.each do |fc| %>
+      <li><%= fc.name %>:</li>
+        <% fc.foods.each do |f| %>
+        <ul>
+          <li>
+            <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+          </li>
+        </ul>
+    <% end %>
+    <% end %>
+    </nav> -->
+
+
+  <!-- <ul class="purchase_list">
+
+  <br> -->
+
+
+  <!-- <div id="menu">
+    <nav>
+      <h2><a href="#"><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2></a>
+      <ul>
+        <% @food_categories.each do |fc| %>
+          <li>
+            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+              <ul>
+                <% fc.foods.each do |f| %>
+                <li>
+                  
+                      <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                       <% end %>
+                </li>
+              </ul>
+          </li>
+    <% end %>
+          </li>
+      </ul>
+    </nav>
+  </div> -->
+
+<!--   <ul class="recipe-column">
+    <% @purchases.each do |r| %>
+  	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
+  	</li>
+  	<li>
+  	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
+  	</li>
+  <% end %> -->
+
+
+  <!-- 
+  <script>
+  ready = function(){
+
+  $(document).ready(function() {
+        $("#my-menu").mmenu({
+           // options
+        }, {
+           // configuration
+           classNames: {
+              vertical: "expand"
+           }
+        });
+     });
+
+
+  $(document).ready(e);
+  $(document).on('page:load', ready);
+  </script>
+
+   -->
+<!--     </main>
+  </div>
+</div> -->
