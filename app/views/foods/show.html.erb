@@ -18,6 +18,8 @@
 
 <%= render '/food_users/form' %>
 <%= button_to 'Purchase', purchase_food_path, method: :post %>
-<%= link_to 'Edit', edit_food_path(@food) %> |
+<% if can? :update, @foods %>
+<%= link_to 'Edit', edit_food_path(@food) %> 
+<% end %>|
 <%= link_to 'Back', foods_path %> | 
 <%= link_to 'Food Categories', food_categories_path %>

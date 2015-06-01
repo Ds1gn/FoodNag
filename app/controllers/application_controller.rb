@@ -1,10 +1,17 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:show, :index]
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
   before_filter :configure_devise_parameters, if: :devise_controller?
+
+class Ability
+  include CanCan::Ability
+
+  def initialize(user)
+  end
+end
 
 	protected
 
