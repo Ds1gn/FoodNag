@@ -6,6 +6,9 @@
 cursor: pointer;
 }
 
+.fridge {
+  margin: auto;
+}
 
 *{
   padding: 0;
