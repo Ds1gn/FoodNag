@@ -9,34 +9,52 @@
       </p>
   </div>
   </div>
-    <ul class="purchase_list">
+
+  <ul class="purchase_list">
       <% @purchases.each do |p| %>
-        <li>
+        <li><hr>
           <%= p.food.name || "None" %>
           <%= link_to 'delete', purchase_path(p), method: :delete %>
         </li>
       <% end %>
     </ul>
-  </div>
-</div>
 
-    <div class="nav-fruit">
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-                </li>
-              </ul>
-          </li>
-          <% end %>
-          </li>
-      </ul>
-    </div>
+
+
+<!--   <div class="col-sm-2 col-sm-offset-5">
+      <table id="myTable">
+          <% @purchases.each do |p| %>
+            <tbody>
+              <tr>
+                <td>
+              <%= p.food.name || "None" %>
+              <%= link_to 'delete', purchase_path(p), method: :delete %>
+              </td>
+            </tr>
+          </tbody>
+                <% end %>
+        </table>
+     </div>
+  </div>
+</div> -->
+
+<div class="nav">
+  <ul>
+    <% @food_categories.each do |fc| %>
+      <li>
+        <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+          <ul>
+            <% fc.foods.each do |f| %>
+            <li>
+                <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                 <% end %>
+            </li>
+          </ul>
+      </li>
+      <% end %>
+      </li>
+  </ul>
+</div>
 
 
 

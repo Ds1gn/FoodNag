@@ -2,13 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.add_food {
+.nav .add_food {
 cursor: pointer;
 }
 
 .fridge {
   margin: 0 auto;
   display: block;
+}
+
+.purchase_list {
+  text-align: center;
 }
 
 *{
