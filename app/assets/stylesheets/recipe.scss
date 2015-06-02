@@ -6,8 +6,19 @@
 	text-align: center;
 }
 
+.fridge h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 40px;
+  color: #993333;
+}
+
 .fridge h2 {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 60px;
   color: #993333;
+}
+
+.fridge-recipe{
+  margin: 0 auto;
+  display: block;
 }
