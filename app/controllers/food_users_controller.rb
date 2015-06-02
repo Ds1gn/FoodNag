@@ -1,7 +1,8 @@
 class FoodUsersController < ApplicationController
   before_action :set_food_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  before_action :is_advertiser?
+  # before_action :is_advertiser?
+  before_action :logged_in_advertiser?
 
   # GET /food_users
   # GET /food_users.json
