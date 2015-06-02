@@ -1,15 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-    <h1>Add Items to Fridge</h1>
+    <h1>Click fridge to add items.</h1>
   </div>
   <div class="col-sm-2 col-sm-offset-5">
       <p class="button">
         <%= image_tag "fridge.png", class: 'fridge img-responsive' %>
       </p>
   </div>
-
-    </div>
+  </div>
     <ul class="purchase_list">
       <% @purchases.each do |p| %>
         <li>
