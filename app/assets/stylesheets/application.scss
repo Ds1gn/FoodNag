@@ -18,14 +18,19 @@
 @import "bootstrap";
 @import "font-awesome";
 
+/* Navbar Styling */
+
 .navbar-default {
-  background-color: #A5DFDF;
+  background-color: black;
+  border-color: transparent;
   height: 100px;
+  opacity: 0.4;
 }
 
-ul.nav.navbar-nav.navbar-right {
-  margin-right: 0px;
+nav.navbar.navbar-default {
+  margin-bottom: 0;
   padding-bottom: 0;
+  opacity: 0.6;
 }
 
 /* nav links */
@@ -34,69 +39,21 @@ ul.nav.navbar-nav.navbar-right {
   padding-top: 40px;
   font-size: 24px;
   font-family: 'Monda';
-  margin-right: 2px;
-  font-weight: bolder;
-  -webkit-text-stroke: 1px #469797;
+  margin-right: 20px;
+  -webkit-text-stroke: 1px #FFF;
 }
 
-/* logo container */
-.navbar-default .navbar-brand {
-  padding: 0 0 0 2px;
-  margin: 0;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFF;
 }
 
-/* logo */
-img {
-  padding: 0;
-  margin-left: 0px;
-  width: 18em;
-  height: 6em;
+/* add color to nav links on hover */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #FFF19A;
 }
 
-
-img {
-   width: auto;
-   max-width: 80%;
-   vertical-align: top;
-   height: auto;
-   margin: 0;
-
+/* remove color container from hover */
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #FFF19A;
 }
-
-section.team {
-   padding: 5.625em 0;
-   text-align: center;
-}
-
-p.team-emph {
-   font-size: 1.5em;
-   line-height: 1.25em;
-   margin: 0 0 0 0;
-}
-
-p.team-emph a {
-   font-size: 1.5em;
-}
-
-h3 {
-   font-size: 1.5em;
-}
-
-div.circular {
-   width: 100%;
-   height: auto;
-   margin: 0 0 1.875em 0;
-   padding: 0 3.125em;
-}
-
-img.avatar {
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
-   border: 0.313em solid #d4d4d4;
-}
-
-div#table-responsive {
-   margin: 0 4em 0 4em;
-}
-

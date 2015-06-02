@@ -28,12 +28,12 @@ nav.navbar.navbar-default {
   font-size: 24px;
   font-family: 'Monda';
   margin-right: 20px;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px #FFF;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF19A;
+  color: #FFF;
 }
 
 /* add color to nav links on hover */
@@ -44,7 +44,6 @@ nav.navbar.navbar-default {
 /* remove color container from hover */
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   color: #FFF19A;
-  background-color: transparent;
 }
 
 
@@ -85,8 +84,7 @@ div#page1 {
   width: 100%;
   background: url(http://i.imgur.com/KbsPuq7.jpg) no-repeat center center fixed;
   background-size: cover;
-  background-color: black;
-  opacity: 4.8;
+
 }
 
 .about-nag {
