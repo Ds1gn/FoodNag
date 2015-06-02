@@ -1,57 +1,57 @@
 <h1>Add Items to Fridge</h1>
 
 <body class="open">
-    <div class="nav">
-      <div class="bs-example">
-<% @food_categories.each do |fc| %>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
-                </h4>
-            </div>
-            <% end %>
-            <div id="collapseOne" class="panel-collapse collapse">
-                <div class="panel-body">
-                  Content
-                </div>
-            </div>
+  <div class="nav">
+    <div class="bs-example">
+      <% @food_categories.each do |fc| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
+          </h4>
+        </div>
+        <% end %>
+        <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+            Content
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </body>
 
-      <div class="nav-fruit">
+<div class="nav-fruit">
+  <ul>
+    <% @food_categories.each do |fc| %>
+    <li>
+      <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
       <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-                </li>
-              </ul>
-          </li>
+        <% fc.foods.each do |f| %>
+        <li>
+          <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
           <% end %>
-          </li>
+        </li>
       </ul>
-    </div>
+    </li>
+    <% end %>
+  </li>
+</ul>
+</div>
 
-    <div class="main">
-      <p class="button">
-        open
-      </p>
-    </div>
+<div class="main">
+  <p class="button">
+    open
+  </p>
+</div>
 
 
 <ul class="purchase_list">
   <% @purchases.each do |p| %>
-    <li>
-      <%= p.food.name || "None" %>
-      <%= link_to 'delete', purchase_path(p), method: :delete %>
-    </li>
+  <li>
+    <%= p.food.name || "None" %>
+    <%= link_to 'delete', purchase_path(p), method: :delete %>
+  </li>
   <% end %>
 </ul>
 <br>
@@ -59,7 +59,7 @@
 
 
 
-    <!-- the wrapper -->
+<!-- the wrapper -->
   <!--   <nav id="my-menu">
     <ul class="vertical">
     <% @food_categories.each do |fc| %>
@@ -72,7 +72,7 @@
         </ul>
     <% end %>
     <% end %>
-    </nav> -->
+  </nav> -->
 
 
   <!-- <ul class="purchase_list">
@@ -109,7 +109,7 @@
   	<li>
   	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
   	</li>
-  <% end %> -->
+    <% end %> -->
 
 
   <!--
@@ -132,7 +132,7 @@
   $(document).on('page:load', ready);
   </script>
 
-   -->
+-->
 <!--     </main>
   </div>
 </div> -->
