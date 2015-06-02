@@ -1,5 +1,5 @@
 class RecipeController < ApplicationController
-
+# before_action :is_advertiser?
 
   def ingredient
     @purchases = Purchase.all

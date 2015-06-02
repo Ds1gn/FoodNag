@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :edit, :update]
   before_action :authenticate_user!
+  before_action :is_advertiser?
  
 
   # GET /foods

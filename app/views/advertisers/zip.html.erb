@@ -1,6 +1,47 @@
+ <head>
+ <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+<!-- end of maybe fonts -->
 
+<!-- fonts in in dev use -->
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+<!-- end of fonts -->
+
+  <%= stylesheet_link_tag 'style'%>
+  <%= stylesheet_link_tag 'static_page'%>
+  <%= javascript_include_tag '//www.google.com/jsapi', 'chartkick' %>
+
+  <%= csrf_meta_tags %>
+  </head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="http://i.imgur.com/jUH1GEK.png"/>
+        </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+       	<li><%= link_to "Dashboard", dash_path %></li>
+        <li><a href="mailto:food@nag.com?Subject=Hello%20again" target="_top">Contact</a></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </div><!--/.nav-collapse-->
+  </div>
+</nav>
 <h1>Purchases for zipcode: <%= @zipcode %></h1>
 <h2>Total purchases: <%= @purchases_by_zip.size %></h2>
 
 
 <%= pie_chart @purchases_by_zip.joins(:food).group('foods.name').count %>
+<

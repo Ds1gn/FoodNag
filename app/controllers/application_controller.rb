@@ -40,7 +40,7 @@ end
 
   def is_advertiser?
     if current_user.advertiser?
-      redirect_to :back, notice: "Advertisers cannot access this page"
+      redirect_to :dash, notice: "Advertisers cannot access this page"
     end
   end
 
