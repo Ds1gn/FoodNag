@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, except: [:show, :index]
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -24,6 +23,12 @@ end
 
   private
 
+  # def is_a_user
+  #   if user_signed_in?
+  #     redirect_to :food_categories
+  #   end
+  # end
+
   def admin_only
     unless current_user.admin?
 
@@ -36,6 +41,12 @@ end
   def is_advertiser?
     if current_user.advertiser?
       redirect_to :back, notice: "Advertisers cannot access this page"
+    end
+  end
+
+  def logged_in_advertiser?
+    if current_user.advertiser?
+      redirect_to :dash
     end
   end
 end
