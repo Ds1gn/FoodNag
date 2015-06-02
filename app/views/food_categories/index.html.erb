@@ -3,16 +3,17 @@
 <body class="open">
     <div class="nav">
       <div class="bs-example">
-
+<% @food_categories.each do |fc| %>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <% end %>
+            <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                  Content
                 </div>
             </div>
         </div>
@@ -20,7 +21,7 @@
     </div>
 </body>
 
-      <!-- <div class="nav-fruit">
+      <div class="nav-fruit">
       <ul>
         <% @food_categories.each do |fc| %>
           <li>
@@ -36,7 +37,7 @@
           <% end %>
           </li>
       </ul>
-    </div> -->
+    </div>
 
     <div class="main">
       <p class="button">
