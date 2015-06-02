@@ -13,21 +13,22 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets"
-@import "bootstrap"
-@import "font-awesome"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 
 
 h1 {
-  margin: 0 0 0 0;
-  padding: 1em 0 0 0;
+   margin: 0;
+   padding: 0; 
+   padding-top: 1em;
 }
 
 h2 {
-  text-align: center;
-  padding: 1em 0 1em 0;
-  margin: 0 0 0 0;
-  color: #FFF;
+   text-align: center;
+   padding: 1em 0 1em 0;
+   margin: 0 0 0 0;
+   color: #FFF;
 }
 
 div.wrapper {
@@ -78,11 +79,11 @@ p.team-emph {
 }
 
 p.team-emph a {
-  font-size: 1.5em;
+   font-size: 1.5em;
 }
 
 h3 {
-  font-size: 1.5em;
+   font-size: 1.5em;
 }
 
 div.circular {
@@ -100,5 +101,5 @@ img.avatar {
 }
 
 div#table-responsive {
-  margin: 0 4em 0 4em;
+   margin: 0 4em 0 4em;
 }
