@@ -1,7 +1,3 @@
-// Place all the styles related to the food_categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .add_food {
 cursor: pointer;
 }
@@ -33,7 +29,7 @@ section {
   transition: left .4s;
 }
 
-.nav{
+.fruits{
   position: fixed;
   top: 0;
   left: 0;
@@ -51,7 +47,7 @@ section {
   left: 0;
 }
 
-.open .nav {
+.open .fruits {
   left: -340px;
 }
 
