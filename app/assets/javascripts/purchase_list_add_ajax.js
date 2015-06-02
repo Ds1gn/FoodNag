@@ -18,7 +18,7 @@ ready = function(){
       var purchaseItemHtml = "<li><hr>" + foodName + ' <a rel="nofollow" data-method="delete" href="/purchases/'+data.purchase_id+'">delete</a></li>'
       var recipeData = "<li>" +  '<a href="'+data.recipe_url+'">' + data.recipe_title + '</a></li>'
 
-      $('.purchase_list').append(purchaseItemHtml);
+      $('.purchase_list').prepend(purchaseItemHtml);
       // $('.recipe-column').append(recipeData);
       // $('#purchase').focus();
       // location.reload();
