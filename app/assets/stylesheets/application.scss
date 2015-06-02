@@ -59,7 +59,7 @@ div.circle:after {
    border-radius: 50%;
 }
 
-img {
+.text img {
    width: auto;
    max-width: 80%;
    vertical-align: top;
@@ -67,8 +67,8 @@ img {
    margin: 0;
    -webkit-border-radius: 6px;
    -moz-border-radius: 6px;
-   border-radius: 6px;
-   border: 1px solid #1F00FF;
+   border-radius: 20px;
+   border: 1px solid #FFF;
 }
 
 section.team {
