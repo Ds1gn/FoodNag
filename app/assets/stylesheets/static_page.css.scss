@@ -21,11 +21,7 @@ nav.navbar.navbar-default {
   opacity: 0.6;
 }
 
-div.dropdown-menu {
-  background-color: #fff;
-}
-
-/* link */
+/* nav links */
 .navbar-default .navbar-nav > li > a {
   color: #FFFFFF;
   padding-top: 40px;
@@ -51,10 +47,6 @@ div.dropdown-menu {
   background-color: transparent;
 }
 
-/* dropdown menu style */
-.dropdown-open {
-  background-color: #FFF;
-}
 
 /* logo container */
 .navbar-default .navbar-brand {
