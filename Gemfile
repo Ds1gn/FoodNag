@@ -28,6 +28,17 @@ gem 'cancancan'
 
 gem 'awesome_print', '~> 1.6.1'
 
+gem 'devise'
+gem 'unirest'
+gem 'annotate', '~> 2.6.6'
+gem 'paranoia'
+gem 'chartkick'
+gem 'hightop'
+gem 'active_median'
+gem 'groupdate'
+gem 'mmenu-rails'
+gem 'font-awesome-rails'
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,15 +65,5 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'devise'
-  gem 'unirest'
-  gem 'annotate', '~> 2.6.6'
-  gem 'paranoia'
-  gem 'chartkick'
-  gem 'hightop'
-  gem 'active_median'
-  gem 'groupdate'
-  gem 'mmenu-rails'
-  gem 'font-awesome-rails'
 end
 
