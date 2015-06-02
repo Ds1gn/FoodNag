@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530162905) do
+ActiveRecord::Schema.define(version: 20150602234025) do
 
   create_table "expirations", force: :cascade do |t|
     t.integer  "food_id"
@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 20150530162905) do
   end
 
   create_table "food_users", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",         default: 1
     t.integer  "food_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "custom_reminder"
   end
 
