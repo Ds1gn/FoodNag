@@ -35,10 +35,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<%= dom_id fc%>"><%= fc.name %></a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse">
+            <div id="<%= dom_id fc%>" class="panel-collapse collapse">
               <% fc.foods.each do |f| %>
                 <div class="panel-body">
                   <span class="add_food" style="color:black;cursor:pointer" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
