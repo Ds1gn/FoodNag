@@ -1,24 +1,24 @@
 
-<h1><%= @display["label"] %></h2>
+<h1><%= @recipe_food["label"] %></h2>
 
-<p><%= @display["level"].humanize %></p>
+<p><%= @recipe_food["level"].humanize %></p>
 
-<p><%= image_tag @display["image"] %></p>
+<p><%= image_tag @recipe_food["image"] %></p>
 
 <% @ingredient_lines.each do |r| %>
 <p><%= r %></p>
 <% end %>
 
-<p><strong>Source: </strong><%= @display["url"] %>
+<p><strong>Source: </strong><%= @recipe_food["url"] %>
 
-<h1><%= @display2["label"] %></h2>
+<h1><%= @recipe_food2["label"] %></h2>
 
-<p><%= @display2["level"].humanize %></p>
+<p><%= @recipe_food2["level"].humanize %></p>
 
-<p><%= image_tag @display2["image"] %></p>
+<p><%= image_tag @recipe_food2["image"] %></p>
 
 <% @ingredient_lines2.each do |r| %>
 <p><%= r %></p>
 <% end %>
 
-<p><strong>Source: </strong><%= @display2["url"] %>
+<p><strong>Source: </strong><%= @recipe_food2["url"] %>

@@ -34,9 +34,8 @@ belongs_to :purchase
 			recipe_title: recipe_title, recipe_image: recipe_image, recipe_url: recipe_url
 			)
 
-
-
 	end
+
 
   # def update_purchase_id
   # 	self.update(purchase_id: current_user.purchases.last.id)
@@ -76,6 +75,34 @@ belongs_to :purchase
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
 		recipe_result["hits"][0]["recipe"]
 
+
+	end
+
+		def self.when_searched(ingredients)
+# These code snippets use an open-source library. http://unirest.io/ruby
+		response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients}",
+  		headers:{
+    	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
+    	"Accept" => "application/json"
+  		}
+		
+		recipe_result = response.body
+		return nil if recipe_result.blank? || recipe_result["hits"].blank?
+		recipe_data = recipe_result["hits"][0]["recipe"]
+
+	end
+
+	def self.when_searched2(ingredients1,ingredients2)
+# These code snippets use an open-source library. http://unirest.io/ruby
+		response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients1}%2C+#{ingredients2}",
+  		headers:{
+    	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
+    	"Accept" => "application/json"
+  		}
+		
+		recipe_result = response.body
+		return nil if recipe_result.blank? || recipe_result["hits"].blank?
+		recipe_data = recipe_result["hits"][1]["recipe"]
 
 	end
 

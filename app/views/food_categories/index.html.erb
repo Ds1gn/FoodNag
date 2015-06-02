@@ -1,38 +1,22 @@
-
-<!-- <div class="outer-wrapper">
-  <div class="wrapper">
-    <header>
-      <h1>Choose Your Items</h1>
-      <i class="fa fa-bars nav-toggle"></i>
-      <nav class="main-navigation">
-        <span class="nav-toggle">Close</span>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Produce</a></li>
-          <li><a href="">Body</a></li>
-          <li><a href="">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main> -->
+<h1>Add Items to Fridge</h1>
 
 <body class="open">
     <div class="nav">
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-                </li>
-              </ul>
-          </li>
-          <% end %>
-          </li>
-      </ul>
+      <div class="bs-example">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. What is HTML?</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
 </body>
 
@@ -105,7 +89,7 @@
               <ul>
                 <% fc.foods.each do |f| %>
                 <li>
-                  
+
                       <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
                        <% end %>
                 </li>
@@ -127,7 +111,7 @@
   <% end %> -->
 
 
-  <!-- 
+  <!--
   <script>
   ready = function(){
 

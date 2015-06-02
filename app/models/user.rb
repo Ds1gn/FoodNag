@@ -33,6 +33,6 @@ class User < ActiveRecord::Base
   has_many :purchases
   has_many :food_users
   has_many :expirations
-  
+
 
 end

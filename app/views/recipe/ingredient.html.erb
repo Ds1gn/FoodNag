@@ -1,20 +1,48 @@
-<h1>ingredient</h1>
-<%= form_tag results_path do %>
-<%= text_field_tag :ingredient %>
-<%= text_field_tag :ingredient1 %>
-<%= text_field_tag :ingredient2 %> 
-<%= submit_tag("Save Data") %>
+<body class="open">
+    <div class="nav">
+    	<h3>Your Fridge</h3>
+      <ul>
+        <% @purchases.each do |p| %>
+          <li>
+           <%= p.food.name %>
+          </li>
+          <% end %>
+          </li>
+      </ul>
+    </div>
+</body>
 
-<% end %>
-<h2>Suggested Recipes based on your purchases</h2>
+<div class="fridge">
+    <p class="button">
+        <%= image_tag "fridge.png" %>
+    </p>
+</div>
 
-<div id="wrapper-recipe">	
-<% @purchases.each do |r| %>   
-	 <span><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
-	  	<div class="pin">
-	  	<%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
+<div class="container">
+	<h1>ingredient</h1>
+	<%= form_tag results_path do %>
+	<%= text_field_tag :ingredients %>
+	<%= text_field_tag :ingredients1 %>
+	<%= text_field_tag :ingredients2 %> 
+	<%= submit_tag("Save Data") %>
+	<% end %>
 	</div>
-	
-  
-<% end %>
+	<hr>
+	<h2>Suggested Recipes based on your purchases</h2>
+		<div class="container">
+			<% @purchases.each do |r| %>
+			<div class="row">
+				 <div class="col-sm-4">
+					<p class="title">
+				 	<%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
+				 	</p>
+				  	<p class="text"><%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
+				  		</p>
+				  	</div>	
+					<% end %>
+				</div>
+			</div>
+
+<div class="main">
+<%= link_to 'shop', food_categories_path %>
 </div>
