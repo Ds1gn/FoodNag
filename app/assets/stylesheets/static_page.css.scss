@@ -8,17 +8,30 @@
 
 /* Navbar Styling */
 
+.intro {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 .navbar-default {
   background-color: black;
   border-color: transparent;
   height: 100px;
   opacity: 0.4;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 nav.navbar.navbar-default {
   margin-bottom: 0;
   padding-bottom: 0;
   opacity: 0.6;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* nav links */
@@ -26,24 +39,29 @@ nav.navbar.navbar-default {
   color: #FFFFFF;
   padding-top: 40px;
   font-size: 24px;
-  font-family: 'Monda';
   margin-right: 20px;
   -webkit-text-stroke: 1px #FFF;
+  font-family: 'Open Sans Condensed', sans-serif;
+
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF;
+  color: #FFF19A;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* add color to nav links on hover */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #FFF19A;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* remove color container from hover */
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   color: #FFF19A;
+  background-color: transparent;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
@@ -51,6 +69,7 @@ nav.navbar.navbar-default {
 .navbar-default .navbar-brand {
   padding: 0 0 0 15px;
   margin: 0 0 0 0;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* logo */
@@ -59,6 +78,7 @@ nav.navbar.navbar-default {
   margin: 0 0 0 0;
   width: 18em;
   height: 6em;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 div#waste-counter{
