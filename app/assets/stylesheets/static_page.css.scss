@@ -59,13 +59,21 @@ nav.navbar.navbar-default {
 
 /* remove color container from hover */
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  color: #FFF19A;
   background-color: transparent;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
 /* logo container */
+.navbar-brand {
+  font-family: 'Lobster', Sans-serif;
+  font-size: 5em;
+  color: #FFF;
+  margin-top: 0.3em;
+}
+
+a.navbar-brancd
+
 .navbar-default .navbar-brand {
   padding: 0 0 0 15px;
   margin: 0 0 0 0;
