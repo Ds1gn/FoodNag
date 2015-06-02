@@ -1,4 +1,44 @@
-<div class="contianer"><h1>Add Items to Fridge</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+    <h1>Add Items to Fridge</h1>
+  </div>
+  <div class="col-sm-2 col-sm-offset-5">
+      <p class="button">
+        <%= image_tag "fridge.png", class: 'fridge img-responsive' %>
+      </p>
+  </div>
+
+    </div>
+    <ul class="purchase_list">
+      <% @purchases.each do |p| %>
+        <li>
+          <%= p.food.name || "None" %>
+          <%= link_to 'delete', purchase_path(p), method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+    <div class="nav-fruit">
+      <ul>
+        <% @food_categories.each do |fc| %>
+          <li>
+            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
+              <ul>
+                <% fc.foods.each do |f| %>
+                <li>
+                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                     <% end %>
+                </li>
+              </ul>
+          </li>
+          <% end %>
+          </li>
+      </ul>
+    </div>
+
 
 
 <section class="open">
@@ -23,39 +63,11 @@
 </section>
 
 
-    <div class="nav-fruit">
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-                </li>
-              </ul>
-          </li>
-          <% end %>
-          </li>
-      </ul>
-    </div>
-
-    <div class="fridge">
-      <p class="button">
-        <%= image_tag "fridge.png" %>
-      </p>
-    </div>
 
 
-<ul class="purchase_list">
-  <% @purchases.each do |p| %>
-    <li>
-      <%= p.food.name || "None" %>
-      <%= link_to 'delete', purchase_path(p), method: :delete %>
-    </li>
-  <% end %>
-</ul>
-</div>
+
+
+
+
 
 
