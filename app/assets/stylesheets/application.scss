@@ -52,3 +52,52 @@ img {
   width: 18em;
   height: 6em;
 }
+<<<<<<< HEAD
+=======
+
+img {
+   width: auto;
+   max-width: 80%;
+   vertical-align: top;
+   height: auto;
+   margin: 0;
+   
+}
+
+section.team {
+   padding: 5.625em 0;
+   text-align: center;
+}
+
+p.team-emph {
+   font-size: 1.5em;
+   line-height: 1.25em;
+   margin: 0 0 0 0;
+}
+
+p.team-emph a {
+   font-size: 1.5em;
+}
+
+h3 {
+   font-size: 1.5em;
+}
+
+div.circular {
+   width: 100%;
+   height: auto;
+   margin: 0 0 1.875em 0;
+   padding: 0 3.125em;
+}
+
+img.avatar {
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   border: 0.313em solid #d4d4d4;
+}
+
+div#table-responsive {
+   margin: 0 4em 0 4em;
+}
+>>>>>>> 2225f80540cdcf8d3b7af685dddae5f46cb137a1
