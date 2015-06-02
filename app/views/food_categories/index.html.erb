@@ -1,47 +1,35 @@
-<div class="container">
+
+<div class="container-fridge">
   <div class="row">
+    <div class="col-sm-2 col-sm-offset-5">
+        <p class="button">
+          <%= image_tag "fridge.png", class: 'fridge img-responsive' %>
+        </p>
+    </div>
     <div class="col-sm-12">
-    <h1>Click fridge to add items.</h1>
+        <span>Click fridge to add items.</span>
+    </div>
   </div>
-  <div class="col-sm-2 col-sm-offset-5">
-      <p class="button">
-        <%= image_tag "fridge.png", class: 'fridge img-responsive' %>
-      </p>
-  </div>
-  </div>
-    <ul class="purchase_list">
+
+
+
+
+
+  <ul class="purchase_list">
       <% @purchases.each do |p| %>
-        <li>
+        <li><hr>
           <%= p.food.name || "None" %>
           <%= link_to 'delete', purchase_path(p), method: :delete %>
         </li>
       <% end %>
-    </ul>
-  </div>
-</div>
+  </ul>
 
-    <div class="nav-fruit">
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                     <% end %>
-                </li>
-              </ul>
-          </li>
-          <% end %>
-          </li>
-      </ul>
-    </div>
+
 
 
 
 <section class="open">
-    <div class="nav">
+    <div class="nav-cat">
       <div class="bs-example">
         <% @food_categories.each do |fc| %>
         <div class="panel panel-default">
@@ -50,17 +38,19 @@
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
                 </h4>
             </div>
-            <% end %>
             <div id="collapseOne" class="panel-collapse collapse">
+              <% fc.foods.each do |f| %>
                 <div class="panel-body">
-                  Content
+                  <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
                 </div>
+                <% end %>
             </div>
         </div>
+        <% end %>
       </div>
     </div>
 </section>
-
+</body>
 
 
 

@@ -2,13 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.add_food {
+span .add_food {
 cursor: pointer;
 }
 
 .fridge {
   margin: 0 auto;
   display: block;
+}
+
+.purchase_list {
+  text-align: center;
+}
+
+.purchase_list li {
+  color: #FF8F8F;
+  font-size: 39px;
+  text-align: center;
+  font-family: 'Walter Turncoat', cursive;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }
 
 *{
@@ -33,14 +50,24 @@ section {
   transition: left .4s;
 }
 
-.nav{
+
+.col-sm-12 span {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 60px;
+  text-align: center;
+  display: block;
+  color: #993333;
+  font-weight: 400;
+}
+
+.nav-cat{
   position: fixed;
   top: 0;
   left: 0;
   width: 300px;
   height: 100%;
   padding: 20px;
-  background: gray;
+  background: #A5DFDF;
   color: white;
   -webkit-transition: left .4s;
   -0-transition: left .4s;
@@ -51,7 +78,7 @@ section {
   left: 0;
 }
 
-.open .nav {
+.open .nav-cat {
   left: -340px;
 }
 
@@ -62,3 +89,27 @@ section {
 .button {
   cursor: pointer;
 }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container-fridge {
+  width: 50%;
+  max-width: 750px;
+  background: $white_opaque;
+  margin: 3em auto 0 auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+  padding: 1em 0;
+}
+
+
