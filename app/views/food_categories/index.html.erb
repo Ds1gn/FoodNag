@@ -1,6 +1,11 @@
 <h1>Add Items to Fridge</h1>
 
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
 <body class="open">
+ 
+
+
   <div class="nav">
     <div class="bs-example">
       <% @food_categories.each do |fc| %>
@@ -8,18 +13,14 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
-          </h4>
-        </div>
-        <% end %>
-        <div id="collapseOne" class="panel-collapse collapse">
-          <div class="panel-body">
-            Content
-          </div>
-        </div>
-      </div>
+        </h4>
     </div>
-  </div>
-</body>
+    <% end %>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        Content
+    </div>
+</div>
 
 <div class="nav-fruit">
   <ul>
@@ -31,27 +32,18 @@
         <li>
           <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
           <% end %>
-        </li>
-      </ul>
-    </li>
-    <% end %>
-  </li>
+      </li>
+  </ul>
+</li>
+<% end %>
+</li>
 </ul>
 </div>
-
-<<<<<<< HEAD
 <div class="main">
   <p class="button">
-    open
-  </p>
+    <%= image_tag "fridge.png" %>
+</p>
 </div>
-=======
-    <div class="main">
-      <p class="button">
-        <%= image_tag "fridge.png" %>
-      </p>
-    </div>
->>>>>>> 9950abd1ff8b64e7096f09cdf3ff8ee91b007d13
 
 
 <ul class="purchase_list">
@@ -59,88 +51,11 @@
   <li>
     <%= p.food.name || "None" %>
     <%= link_to 'delete', purchase_path(p), method: :delete %>
-  </li>
-  <% end %>
+</li>
+<% end %>
 </ul>
 <br>
+</body>
 
 
 
-
-<!-- the wrapper -->
-  <!--   <nav id="my-menu">
-    <ul class="vertical">
-    <% @food_categories.each do |fc| %>
-      <li><%= fc.name %>:</li>
-        <% fc.foods.each do |f| %>
-        <ul>
-          <li>
-            <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-          </li>
-        </ul>
-    <% end %>
-    <% end %>
-  </nav> -->
-
-
-  <!-- <ul class="purchase_list">
-
-  <br> -->
-
-
-  <!-- <div id="menu">
-    <nav>
-      <h2><a href="#"><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2></a>
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-
-                      <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                       <% end %>
-                </li>
-              </ul>
-          </li>
-    <% end %>
-          </li>
-      </ul>
-    </nav>
-  </div> -->
-
-<!--   <ul class="recipe-column">
-    <% @purchases.each do |r| %>
-  	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
-  	</li>
-  	<li>
-  	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
-  	</li>
-    <% end %> -->
-
-
-  <!--
-  <script>
-  ready = function(){
-
-  $(document).ready(function() {
-        $("#my-menu").mmenu({
-           // options
-        }, {
-           // configuration
-           classNames: {
-              vertical: "expand"
-           }
-        });
-     });
-
-
-  $(document).ready(e);
-  $(document).on('page:load', ready);
-  </script>
-
--->
-<!--     </main>
-  </div>
-</div> -->
