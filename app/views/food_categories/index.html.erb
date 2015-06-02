@@ -1,96 +1,29 @@
-<h1>Add Items to Fridge</h1>
+<div class="contianer"><h1>Add Items to Fridge</h1>
 
-<body class="open">
-  <div class="nav">
-    <div class="bs-example">
-      <% @food_categories.each do |fc| %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
-          </h4>
-        </div>
-        <% end %>
-        <div id="collapseOne" class="panel-collapse collapse">
-          <div class="panel-body">
-            Content
-          </div>
+
+<section class="open">
+    <div class="nav">
+      <div class="bs-example">
+        <% @food_categories.each do |fc| %>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
+                </h4>
+            </div>
+            <% end %>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Content
+                </div>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
-<div class="nav-fruit">
-  <ul>
-    <% @food_categories.each do |fc| %>
-    <li>
-      <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-      <ul>
-        <% fc.foods.each do |f| %>
-        <li>
-          <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-          <% end %>
-        </li>
-      </ul>
-    </li>
-    <% end %>
-  </li>
-</ul>
-</div>
-
-<<<<<<< HEAD
-<div class="main">
-  <p class="button">
-    open
-  </p>
-</div>
-=======
-    <div class="main">
-      <p class="button">
-        <%= image_tag "fridge.png" %>
-      </p>
-    </div>
->>>>>>> 9950abd1ff8b64e7096f09cdf3ff8ee91b007d13
+</section>
 
 
-<ul class="purchase_list">
-  <% @purchases.each do |p| %>
-  <li>
-    <%= p.food.name || "None" %>
-    <%= link_to 'delete', purchase_path(p), method: :delete %>
-  </li>
-  <% end %>
-</ul>
-<br>
-
-
-
-
-<!-- the wrapper -->
-  <!--   <nav id="my-menu">
-    <ul class="vertical">
-    <% @food_categories.each do |fc| %>
-      <li><%= fc.name %>:</li>
-        <% fc.foods.each do |f| %>
-        <ul>
-          <li>
-            <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-          </li>
-        </ul>
-    <% end %>
-    <% end %>
-  </nav> -->
-
-
-  <!-- <ul class="purchase_list">
-
-  <br> -->
-
-
-  <!-- <div id="menu">
-    <nav>
-      <h2><a href="#"><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2></a>
+    <div class="nav-fruit">
       <ul>
         <% @food_categories.each do |fc| %>
           <li>
@@ -98,49 +31,31 @@
               <ul>
                 <% fc.foods.each do |f| %>
                 <li>
-
-                      <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                       <% end %>
+                    <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                     <% end %>
                 </li>
               </ul>
           </li>
-    <% end %>
+          <% end %>
           </li>
       </ul>
-    </nav>
-  </div> -->
+    </div>
 
-<!--   <ul class="recipe-column">
-    <% @purchases.each do |r| %>
-  	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
-  	</li>
-  	<li>
-  	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
-  	</li>
-    <% end %> -->
+    <div class="main">
+      <p class="button">
+        <%= image_tag "fridge.png" %>
+      </p>
+    </div>
 
 
-  <!--
-  <script>
-  ready = function(){
-
-  $(document).ready(function() {
-        $("#my-menu").mmenu({
-           // options
-        }, {
-           // configuration
-           classNames: {
-              vertical: "expand"
-           }
-        });
-     });
+<ul class="purchase_list">
+  <% @purchases.each do |p| %>
+    <li>
+      <%= p.food.name || "None" %>
+      <%= link_to 'delete', purchase_path(p), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+</div>
 
 
-  $(document).ready(e);
-  $(document).on('page:load', ready);
-  </script>
-
--->
-<!--     </main>
-  </div>
-</div> -->
