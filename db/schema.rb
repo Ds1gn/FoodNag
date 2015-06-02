@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530162905) do
+ActiveRecord::Schema.define(version: 20150602231203) do
 
   create_table "expirations", force: :cascade do |t|
     t.integer  "food_id"
