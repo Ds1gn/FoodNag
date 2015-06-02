@@ -1,9 +1,10 @@
-<h1>Add Items to Fridge</h1>
+<div class="contianer"><h1>Add Items to Fridge</h1>
 
-<body class="open">
-<!--     <div class="nav">
+
+<section class="open">
+    <div class="nav">
       <div class="bs-example">
-<% @food_categories.each do |fc| %>
+        <% @food_categories.each do |fc| %>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -18,10 +19,11 @@
             </div>
         </div>
       </div>
-    </div> -->
-</body>
+    </div>
+</section>
 
-      <div class="nav-fruit">
+
+    <div class="nav-fruit">
       <ul>
         <% @food_categories.each do |fc| %>
           <li>
@@ -54,85 +56,6 @@
     </li>
   <% end %>
 </ul>
-<br>
+</div>
 
 
-
-
-    <!-- the wrapper -->
-  <!--   <nav id="my-menu">
-    <ul class="vertical">
-    <% @food_categories.each do |fc| %>
-      <li><%= fc.name %>:</li>
-        <% fc.foods.each do |f| %>
-        <ul>
-          <li>
-            <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-          </li>
-        </ul>
-    <% end %>
-    <% end %>
-    </nav> -->
-
-
-  <!-- <ul class="purchase_list">
-
-  <br> -->
-
-
-  <!-- <div id="menu">
-    <nav>
-      <h2><a href="#"><i class="fa fa-reorder floatRight cursorPointer"></i>All Categories</h2></a>
-      <ul>
-        <% @food_categories.each do |fc| %>
-          <li>
-            <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-              <ul>
-                <% fc.foods.each do |f| %>
-                <li>
-
-                      <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                       <% end %>
-                </li>
-              </ul>
-          </li>
-    <% end %>
-          </li>
-      </ul>
-    </nav>
-  </div> -->
-
-<!--   <ul class="recipe-column">
-    <% @purchases.each do |r| %>
-  	<li><%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
-  	</li>
-  	<li>
-  	  <%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
-  	</li>
-  <% end %> -->
-
-
-  <!--
-  <script>
-  ready = function(){
-
-  $(document).ready(function() {
-        $("#my-menu").mmenu({
-           // options
-        }, {
-           // configuration
-           classNames: {
-              vertical: "expand"
-           }
-        });
-     });
-
-
-  $(document).ready(e);
-  $(document).on('page:load', ready);
-  </script>
-
-   -->
-<!--     </main>
-  </div>
-</div> -->

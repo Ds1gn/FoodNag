@@ -16,11 +16,11 @@ html {
   background: #a5dfdf;
 }
 
-body .open {
+section .open {
     background: #a5dfdf;
 }
 
-body {
+section {
   font: 14px 'Ubuntu', sans-serif;
   position: relative;
   left: 0;
@@ -32,7 +32,7 @@ body {
 .nav{
   position: fixed;
   top: 0;
-  left: -340px;
+  left: 0;
   width: 300px;
   height: 100%;
   padding: 20px;
@@ -43,30 +43,12 @@ body {
   transition: left .4s;
 }
 
-.nav-fruit{
-  position: fixed;
-  top: 0;
-  left: -340px;
-  width: 300px;
-  height: 100%;
-  padding: 20px;
-  background: yellow;
-  color: white;
-  -webkit-transition: left .4s;
-  -0-transition: left .4s;
-  transition: left .4s;
-}
-
 .open {
-  left: 340px;
-}
-
-.open-vegetable {
-  left: 340px;
+  left: 0;
 }
 
 .open .nav {
-  left: 0;
+  left: -340px;
 }
 
 .button-fruit {
