@@ -42,7 +42,8 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Fridge</a></li>
+        <li><%= link_to "Fridge", food_categories_path %></li>
+        <li><%= link_to "Recipes", recipe_ingredient_path %></li>
         <li><a href="mailto:food@nag.com?Subject=Hello%20again" target="_top">Contact</a></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       </ul>
