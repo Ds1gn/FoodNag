@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.nav .add_food {
-  cursor: pointer;
+.add_food {
+cursor: pointer;
 }
 
 .fridge {
@@ -20,6 +20,12 @@
   font-size: 39px;
   text-align: center;
   font-family: 'Walter Turncoat', cursive;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
 }
 
 *{
@@ -96,7 +102,7 @@ section {
     clear: both;
 }
 
-.container {
+.container-fridge {
   width: 50%;
   max-width: 750px;
   background: $white_opaque;

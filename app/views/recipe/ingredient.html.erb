@@ -1,4 +1,4 @@
-<body class="open">
+<section class="open">
     <div class="nav">
     	<h3>Your Fridge</h3>
       <ul>
@@ -10,25 +10,65 @@
           </li>
       </ul>
     </div>
-</body>
+</section>
 
-<div class="fridge">
-    <p class="button">
-        <%= image_tag "fridge.png" %>
-    </p>
+
+<div class="row">
+  <div class="col-sm-2 col-sm-offset-5">
+      <p class="button">
+        <%= image_tag "fridge.png", class: 'fridge img-responsive' %>
+      </p>
+  </div>
 </div>
 
+
+
+
+
+
+
 <div class="container">
-	<h1>ingredient</h1>
-	<%= form_tag results_path do %>
-	<%= text_field_tag :ingredients %>
-	<%= text_field_tag :ingredients1 %>
-	<%= text_field_tag :ingredients2 %>
-	<%= submit_tag("Save Data") %>
-	<% end %>
+  <div class="fridge">
+	 <h1>Mix + match food ingredients</h1>
+  </div>
+<div class="container-fluid">
+  <%= form_tag results_path do %>
+    <div class="row">
+      <div class="col-sm-8 ol-sm-offset-2" >
+        <div class="col-md-4">
+          <div class="form-group">
+          <label for="City1">First Ingredient</label>
+             <%= text_field_tag :ingredients, "", class: "form-control", placeholder: "Chocolate" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="City2">Second Ingredient</label>
+            <%= text_field_tag :ingredients1, "", class: "form-control", placeholder: "Apple" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="days">Third Ingredient</label>
+            <%= text_field_tag :ingredients2, "", class: "form-control", placeholder: "Pork"  %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+       <div class="col-md-3 column-center">
+        <div class="form-group">
+            <button class="btn btn-block btn-info btn-lg" type="submit" data-disable-with="Let's Cook!" data-toggle="modal" data-target=".bs-example-modal-lg">Turn Up The Heat</button>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 	</div>
 	<hr>
-	<h2>Suggested Recipes based on your purchases</h2>
+  <div class="fridge">
+	 <h2>Suggested Recipes based on your purchases</h2>
+  </div>
 		<div class="container">
 			<% @purchases.each do |r| %>
 			<div class="row">
@@ -36,7 +76,7 @@
 					<p class="title">
 				 	<%= link_to r.recipe.recipe_title, r.recipe.recipe_url %>
 				 	</p>
-				  	<p class="text"><%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url %>
+				  	<p class="text"><%= link_to (image_tag r.recipe.recipe_image), r.recipe.recipe_url, :target => '_blank' %>
 				  		</p>
 				  	</div>
 					<% end %>

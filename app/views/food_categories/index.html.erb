@@ -1,6 +1,5 @@
 
-<body>
-<div class="container">
+<div class="container-fridge">
   <div class="row">
     <div class="col-sm-2 col-sm-offset-5">
         <p class="button">
@@ -9,7 +8,7 @@
     </div>
     <div class="col-sm-12">
         <span>Click fridge to add items.</span>
-  </div>
+    </div>
   </div>
 
 
@@ -25,23 +24,6 @@
       <% end %>
     </ul>
 
-<div class="nav">
-  <ul>
-    <% @food_categories.each do |fc| %>
-      <li>
-        <a href="#"><i class="fa fa-reorder"></i><%= fc.name %>:</a>
-          <ul>
-            <% fc.foods.each do |f| %>
-            <li>
-                <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
-                 <% end %>
-            </li>
-          </ul>
-      </li>
-      <% end %>
-      </li>
-  </ul>
-</div>
 
 
 
@@ -56,13 +38,15 @@
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><%= fc.name %></a>
                 </h4>
             </div>
-            <% end %>
             <div id="collapseOne" class="panel-collapse collapse">
+              <% fc.foods.each do |f| %>
                 <div class="panel-body">
-                  Content
+                  <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
                 </div>
+                <% end %>
             </div>
         </div>
+        <% end %>
       </div>
     </div>
 </section>
