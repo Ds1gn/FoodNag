@@ -41,7 +41,7 @@
             <div id="collapseOne" class="panel-collapse collapse">
               <% fc.foods.each do |f| %>
                 <div class="panel-body">
-                  <span class="add_food" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                  <span class="add_food" style="color:black;cursor:pointer" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
                 </div>
                 <% end %>
             </div>
