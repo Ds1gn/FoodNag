@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <% Purchase.view_by_zip.each do |zip_hash| %>
-  <br>
-  <% zip_hash.each do |zip, purchases| %>
-    <strong><%= zip %></strong>
-    <br>
-    <% purchases.each do |purchase| %>
-      <%= purchase.food.name %>
-    <% end %>
-  <% end %>
+<br>
+<% zip_hash.each do |zip, purchases| %>
+<strong><%= zip %></strong>
+<br>
+<% purchases.each do |purchase| %>
+<%= purchase.food.name %>
+<% end %>
+<% end %>
 <% end %>
 <h1>Listing Foods</h1>
 
@@ -26,13 +26,13 @@
 
   <tbody>
     <% @foods.each do |food| %>
-      <tr>
-        <td><%= food.name %></td>
-        <td><%= food.image %></td>
-        <td><%= food.shelf_life %></td>
-        <td><%= link_to 'Show', food %></td>
-        <td><%= link_to 'Edit', edit_food_path(food) %></td>
-      </tr>
+    <tr>
+      <td><%= food.name %></td>
+      <td><%= food.image %></td>
+      <td><%= food.shelf_life %></td>
+      <td><%= link_to 'Show', food %></td>
+      <td><%= link_to 'Edit', edit_food_path(food) %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
