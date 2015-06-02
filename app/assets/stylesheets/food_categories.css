@@ -15,6 +15,13 @@ cursor: pointer;
   text-align: center;
 }
 
+.purchase_list li {
+  color: #FF8F8F;
+  font-size: 39px;
+  text-align: center;
+  font-family: 'Walter Turncoat', cursive;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -37,6 +44,15 @@ section {
   transition: left .4s;
 }
 
+.col-sm-12 span {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 60px;
+  text-align: center;
+  display: block;
+  color: #993333;
+  font-weight: 400;
+}
+
 .nav{
   position: fixed;
   top: 0;
@@ -44,7 +60,7 @@ section {
   width: 300px;
   height: 100%;
   padding: 20px;
-  background: gray;
+  background: #A5DFDF;
   color: white;
   -webkit-transition: left .4s;
   -0-transition: left .4s;
@@ -66,3 +82,27 @@ section {
 .button {
   cursor: pointer;
 }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container {
+  width: 50%;
+  max-width: 750px;
+  background: $white_opaque;
+  margin: 3em auto 0 auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+  padding: 1em 0;
+}
+
+

@@ -15,11 +15,11 @@ ready = function(){
     }).success(function(data){
       console.log(data);
 
-      var purchaseItemHtml = "<li>" + foodName + ' <a rel="nofollow" data-method="delete" href="/purchases/'+data.purchase_id+'">delete</a></li>'
+      var purchaseItemHtml = "<li><hr>" + foodName + ' <a rel="nofollow" data-method="delete" href="/purchases/'+data.purchase_id+'">delete</a></li>'
       var recipeData = "<li>" +  '<a href="'+data.recipe_url+'">' + data.recipe_title + '</a></li>'
 
       $('.purchase_list').append(purchaseItemHtml);
-      $('.recipe-column').append(recipeData);
+      // $('.recipe-column').append(recipeData);
       // $('#purchase').focus();
       // location.reload();
     }).error(function(error, response){
