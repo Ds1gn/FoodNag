@@ -73,6 +73,7 @@ section {
   -webkit-transition: left .4s;
   -0-transition: left .4s;
   transition: left .4s;
+  margin-top: 100px;
 }
 
 .open {
