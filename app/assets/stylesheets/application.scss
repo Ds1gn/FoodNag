@@ -13,97 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
-
-h1 {
-   margin: 0;
-   padding: 0; 
-   padding-top: 1em;
+.navbar-default {
+  background-color: #A5DFDF;
+  height: 100px;
 }
 
-h2 {
-   text-align: center;
-   padding: 1em 0 1em 0;
-   margin: 0 0 0 0;
-   color: #FFF;
+ul.nav.navbar-nav.navbar-right {
+  margin-right: 0px;
+  padding-bottom: 0;
 }
 
-div.wrapper {
-   width: 1280px;
-   margin: 0 auto;
+/* nav links */
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+  padding-top: 40px;
+  font-size: 24px;
+  font-family: 'Monda';
+  margin-right: 2px;
+  font-weight: bolder;
+  -webkit-text-stroke: 1px #469797;
 }
 
-div.grid-unit {
-   position: relative;
-   width: 33.33%;
-   float: left;
-   display: inline;
-   margin: 0px 0px 1.8em 0px;
-   text-align: center;
+/* logo container */
+.navbar-default .navbar-brand {
+  padding: 0 0 0 2px;
+  margin: 0;
 }
 
-div.circle:after {
-   -webkit-border-radius: 50%;
-   -o-border-radius: 50%;
-   -moz-border-radius: 50%;
-   -ms-border-radius: 50%;
-   content: "";
-   display: block;
-   width: 90%;
-   height: 0;
-   padding-bottom: 100%;
-   border: 1px solid #d4d4d4;
-   border-radius: 50%;
-}
-
-.text img {
-   width: auto;
-   max-width: 80%;
-   vertical-align: top;
-   height: auto;
-   margin: 0;
-   -webkit-border-radius: 6px;
-   -moz-border-radius: 6px;
-   border-radius: 20px;
-   border: 1px solid #FFF;
-}
-
-section.team {
-   padding: 5.625em 0;
-   text-align: center;
-}
-
-p.team-emph {
-   font-size: 1.5em;
-   line-height: 1.25em;
-   margin: 0 0 0 0;
-}
-
-p.team-emph a {
-   font-size: 1.5em;
-}
-
-h3 {
-   font-size: 1.5em;
-}
-
-div.circular {
-   width: 100%;
-   height: auto;
-   margin: 0 0 1.875em 0;
-   padding: 0 3.125em;
-}
-
-img.avatar {
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
-   border: 0.313em solid #d4d4d4;
-}
-
-div#table-responsive {
-   margin: 0 4em 0 4em;
+/* logo */
+img {
+  padding: 0;
+  margin-left: 0px;
+  width: 18em;
+  height: 6em;
 }
