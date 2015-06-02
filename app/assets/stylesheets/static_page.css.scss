@@ -104,7 +104,6 @@ div#page1 {
   padding: 0 4em 0 4em;
 }
 
-
 /* About page */
 #page2 {
   height:auto;
@@ -138,6 +137,7 @@ div#page1 {
 }
 
 /* body stylessss */
+
 h1 {
   margin: 0 0 0 0;
   padding: 1em 0 0 0;
@@ -219,6 +219,14 @@ img.avatar {
    border: 0.313em solid #d4d4d4;
 }
 
-div#table-responsive {
+section {
   margin: 0 4em 0 4em;
+}
+
+#counter {
+  text-align: center;
+}
+
+div.clearfix {
+  text-align: center;
 }
