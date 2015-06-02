@@ -3,6 +3,7 @@ class FoodCategoriesController < ApplicationController
   # before_action :is_advertiser?
   before_action :logged_in_advertiser?
   before_action :set_food_category, only: [:show]
+  before_action :is_advertiser?
  
 
   # GET /food_categories

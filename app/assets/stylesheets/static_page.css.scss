@@ -10,13 +10,14 @@
 
 .intro {
   position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     text-align: center;
-    color: #FFFFFF;
+    color:#FFFFFF;
+    stroke:2px black;
 }
 
 .navbar-default {
@@ -153,6 +154,7 @@ div#page1 {
 h1 {
   margin: 0 0 0 0;
   padding: 1em 0 0 0;
+  font-family:Open Sans Condensed, sans-serif;
 }
 
 h2 {

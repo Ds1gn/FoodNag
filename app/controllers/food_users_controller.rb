@@ -3,6 +3,7 @@ class FoodUsersController < ApplicationController
   before_action :authenticate_user!
   # before_action :is_advertiser?
   before_action :logged_in_advertiser?
+  before_action :is_advertiser?
 
   # GET /food_users
   # GET /food_users.json
