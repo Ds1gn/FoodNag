@@ -12,11 +12,12 @@
     </div>
 </body>
 
-<div class="main">
+<div class="fridge">
     <p class="button">
-        Open Your Fridge
+        <%= image_tag "fridge.png" %>
     </p>
- </div>
+</div>
+
 <div class="container">
 	<h1>ingredient</h1>
 	<%= form_tag results_path do %>
@@ -42,4 +43,6 @@
 				</div>
 			</div>
 
-
+<div class="main">
+<%= link_to 'shop', food_categories_path %>
+</div>
