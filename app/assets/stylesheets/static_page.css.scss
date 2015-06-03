@@ -2,134 +2,109 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 @import "bootstrap";
 @import "font-awesome";
 
-/* Navbar Styling */
-
-.intro {
-  position: absolute;
-    top: 30%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    text-align: center;
-    color:#FFFFFF;
-    stroke:2px black;
+html {
+  font-family: "Oswald";
 }
+
+/* Navbar container Styling */
 
 .navbar-default {
-  background-color: black;
   border-color: transparent;
   height: 100px;
-  opacity: 0.4;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  opacity: 0.6;
-  font-family: 'Open Sans Condensed', sans-serif;
+  width: auto;
+/*  background-color: #A5DFDF;*/
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* nav links */
+
 .navbar-default .navbar-nav > li > a {
   color: #FFFFFF;
-  padding-top: 40px;
+  padding-top: 35px;
   font-size: 24px;
   margin-right: 20px;
   -webkit-text-stroke: 1px #FFF;
-  font-family: 'Open Sans Condensed', sans-serif;
-
+  font-family: 'Oswald';
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF19A;
-  font-family: 'Open Sans Condensed', sans-serif;
+    color: #FFF;
 }
 
-/* add color to nav links on hover */
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF19A;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
+/* brand */
 
-/* remove color container from hover */
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  background-color: transparent;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
-
-/* logo container */
-.navbar-brand {
-  font-family: 'Lobster', Sans-serif;
-  font-size: 5em;
-  color: #FFF;
+.navbar-default .navbar-brand {
+  font-family: 'Pacifico';
+  font-size: 4.5em;
+  color: #FFFFFF;
   margin-top: 0.3em;
 }
 
-a.navbar-brancd
-
-.navbar-default .navbar-brand {
-  padding: 0 0 0 15px;
-  margin: 0 0 0 0;
-  font-family: 'Open Sans Condensed', sans-serif;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FFFFFF;
 }
 
-/* logo */
-.navbar-default .navbar-brand img {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-  width: 18em;
-  height: 6em;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-
+/* counter */
 div#waste-counter{
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 4em 0 4em 0;
   border: 1px black;
   background-color: #A5DFDF;
 }
 
+#counter {
+  text-align: center;
+}
+
+div.clearfix {
+  text-align: center;
+}
+
 .callout {
-  height:263px;
+  height: 263px;
   width: 100%;
   background-color: #A5DFDF;
 }
 
 .inner-container {
-  padding-top:5.5em;
+  padding-top: 5.5em;
 }
 
 /* Header Page */
+
 div#page1 {
-  height: 700px;
+  height: 750px;
   width: 100%;
   background: url(http://i.imgur.com/KbsPuq7.jpg) no-repeat center center fixed;
   background-size: cover;
-
 }
 
-.about-nag {
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
   text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 2em;
-  padding: 0 4em 0 4em;
+  color:#FFFFFF;
+  stroke:2px black;
 }
 
 /* About page */
+
 #page2 {
   height:auto;
   width:100%;
   background:#FFFFFF;
   padding-top: 20px;
 }
+
 .about-nag {
   text-align: center;
   font-size: 1.5em;
@@ -142,6 +117,7 @@ div#page1 {
 }
 
 /* Contact */
+
 #page3 {
   height:700px;
   width:100%;
@@ -160,7 +136,7 @@ div#page1 {
 h1 {
   margin: 0 0 0 0;
   padding: 1em 0 0 0;
-  font-family:Open Sans Condensed, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 h2 {
@@ -176,77 +152,72 @@ div.wrapper {
 }
 
 div.grid-unit {
-   position: relative;
-   width: 33.33%;
-   float: left;
-   display: inline;
-   margin: 0px 0px 1.8em 0px;
-   text-align: center;
+  position: relative;
+  width: 33.33%;
+  float: left;
+  display: inline;
+  margin: 0px 0px 1.8em 0px;
+  text-align: center;
 }
 
 div.circle:after {
-   -webkit-border-radius: 50%;
-   -o-border-radius: 50%;
-   -moz-border-radius: 50%;
-   -ms-border-radius: 50%;
-   content: "";
-   display: block;
-   width: 90%;
-   height: 0;
-   padding-bottom: 100%;
-   border: 1px solid #d4d4d4;
-   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 0;
+  padding-bottom: 100%;
+  border: 1px solid #d4d4d4;
+  border-radius: 50%;
 }
 
 img {
-   width: auto;
-   max-width: 80%;
-   vertical-align: top;
-   height: auto;
-   margin: 0;
+  width: auto;
+  max-width: 80%;
+  vertical-align: top;
+  height: auto;
+  margin: 0;
 }
 
 section.team {
-   padding: 5.625em 0;
-   text-align: center;
+  padding: 5.625em 0;
+  text-align: center;
 }
 
 p.team-emph {
-   font-size: 1.5em;
-   line-height: 1.25em;
-   margin: 0 0 0 0;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin: 0;
+  font-family: "Oswald";
 }
 
 p.team-emph a {
   font-size: 1.5em;
+  font-family: "Oswald";
 }
 
 h3 {
   font-size: 1.5em;
+  font-family: "Oswald";
 }
 
 div.circular {
-   width: 100%;
-   height: auto;
-   margin: 0 0 1.875em 0;
-   padding: 0 3.125em;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.875em 0;
+  padding: 0 3.125em;
 }
 
 img.avatar {
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
-   border: 0.313em solid #d4d4d4;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 0.313em solid #d4d4d4;
 }
 
 section {
   margin: 0 4em 0 4em;
-}
-
-#counter {
-  text-align: center;
-}
-
-div.clearfix {
-  text-align: center;
 }

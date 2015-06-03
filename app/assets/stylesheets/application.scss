@@ -18,42 +18,42 @@
 @import "bootstrap";
 @import "font-awesome";
 
-/* Navbar Styling */
+/* Navbar container Styling */
 
 .navbar-default {
-  background-color: black;
   border-color: transparent;
   height: 100px;
-  opacity: 0.4;
-}
-
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  opacity: 0.6;
+  width: auto;
+  background-color: #A5DFDF;
 }
 
 /* nav links */
+
 .navbar-default .navbar-nav > li > a {
   color: #FFFFFF;
-  padding-top: 40px;
+  padding-top: 35px;
   font-size: 24px;
-  font-family: 'Monda';
   margin-right: 20px;
   -webkit-text-stroke: 1px #FFF;
+  font-family: 'Oswald';
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF;
+    color: #FFF;
 }
 
-/* add color to nav links on hover */
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #FFF19A;
+/* brand */
+
+.navbar-default .navbar-brand {
+  font-family: 'Pacifico';
+  font-size: 4.5em;
+  color: #FFFFFF;
+  margin-top: 0.6em;
+  margin-left: -10px;
 }
 
-/* remove color container from hover */
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  color: #FFF19A;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #FFFFFF;
 }

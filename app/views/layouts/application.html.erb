@@ -1,17 +1,13 @@
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>Food Nag</title>
   <meta name="description" content="FoodNag">
   <meta name="keywords" content="FoodNag">
 
-<!-- test fonts, maybe use them? -->
-  <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans|Lobster|Pacifico|Molengo' rel='stylesheet' type='text/css'>
-<!-- end of maybe fonts -->
-
 <!-- fonts in in dev use -->
-  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bangers|Walter+Turncoat|Pacifico|Lobster|Oswald' rel='stylesheet' type='text/css'>
 <!-- end of fonts -->
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -20,10 +16,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-
 <body>
-
-<!-- Static navbar -->
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
@@ -33,9 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="http://i.imgur.com/jUH1GEK.png"/>
-        </a>
+        <a class="navbar-brand" href="#">Food NaG</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -44,7 +35,7 @@
         <li><a href="mailto:food@nag.com?Subject=Hello%20again" target="_top">Contact</a></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       </ul>
-    </div><!--/.nav-collapse-->
+    </div> <!--/.nav-collapse-->
   </div>
 </nav>
 
@@ -63,8 +54,6 @@
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
-
-
 
 </body>
 </html>
