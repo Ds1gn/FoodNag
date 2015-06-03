@@ -5,9 +5,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-html {
-  font-family: "Oswald";
-}
 
 /* Navbar container Styling */
 
@@ -32,7 +29,7 @@ html {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #FFF;
+  color: #FFF;
 }
 
 /* brand */
