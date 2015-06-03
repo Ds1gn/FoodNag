@@ -41,13 +41,13 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" style="color:black;font-family: 'Walter Turncoat', cursive;" href="#<%= dom_id fc%>"><%= fc.name %></a>
+                    <a data-toggle="collapse" data-parent="#accordion" style="color:black;font-family: 'Oswald'; font-size:45px;" href="#<%= dom_id fc%>"><%= fc.name %></a>
                 </h4>
             </div>
             <div id="<%= dom_id fc%>" class="panel-collapse collapse">
               <% fc.foods.each do |f| %>
                 <div class="panel-body">
-                  <span class="add_food" style="color:black;cursor:pointer;font-family: 'Walter Turncoat', cursive;" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
+                  <span class="add_food" style="color:black;cursor:pointer;font-family: 'Oswald'; font-size:35px;" data-food-name="<%= f.name %>" data-food-id="<%= f.id %>"><%= f.name %></span>
                 </div>
                 <% end %>
             </div>
