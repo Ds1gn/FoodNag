@@ -36,9 +36,10 @@
 
 .navbar-default .navbar-brand {
   font-family: 'Pacifico';
-  font-size: 4.5em;
+  font-size: 4em;
   color: #FFFFFF;
   margin-top: 0.3em;
+  text-decoration: underline;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -77,20 +78,8 @@ div.clearfix {
 div#page1 {
   height: 750px;
   width: 100%;
-  background: url(http://i.imgur.com/KbsPuq7.jpg) no-repeat center center fixed;
+  background: url("http://i.imgur.com/NCzuEQJ.jpg") no-repeat center center fixed;
   background-size: cover;
-}
-
-.intro {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  text-align: center;
-  color:#FFFFFF;
-  stroke:2px black;
 }
 
 /* About page */
