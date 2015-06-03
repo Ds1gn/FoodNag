@@ -39,6 +39,7 @@ gem 'groupdate'
 gem 'mmenu-rails'
 gem 'font-awesome-rails'
 gem 'rails_12factor'
+gem 'httparty'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

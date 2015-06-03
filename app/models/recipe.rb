@@ -8,7 +8,7 @@
 #
 
 class Recipe < ActiveRecord::Base
-require 'Unirest'
+require 'unirest'
 belongs_to :purchase
 # after_create :update_purchase_id
 
@@ -21,11 +21,11 @@ belongs_to :purchase
     	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
     	"Accept" => "application/json"
   		}
-		
+
 		recipe_result = response.body
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
 		recipe_data = recipe_result["hits"][0]["recipe"]
-		
+
 		recipe_title = recipe_data["label"]
 		recipe_image = recipe_data["image"]
 		recipe_url = recipe_data["url"]
@@ -57,7 +57,7 @@ belongs_to :purchase
     	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
     	"Accept" => "application/json"
   		}
-		
+
 		recipe_result = response.body
 		recipe_result["hits"][0]["recipe"]
 
@@ -85,7 +85,7 @@ belongs_to :purchase
     	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
     	"Accept" => "application/json"
   		}
-		
+
 		recipe_result = response.body
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
 		recipe_data = recipe_result["hits"][0]["recipe"]
@@ -99,7 +99,7 @@ belongs_to :purchase
     	"X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
     	"Accept" => "application/json"
   		}
-		
+
 		recipe_result = response.body
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
 		recipe_data = recipe_result["hits"][1]["recipe"]
