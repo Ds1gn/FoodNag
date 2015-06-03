@@ -3,7 +3,7 @@
 
 <p><%= @recipe_food["level"].humanize %></p>
 
-<p><%= image_tag @recipe_food["image"] %></p>
+<p></p>
 
 <% @ingredient_lines.each do |r| %>
 <p><%= r %></p>
@@ -22,3 +22,30 @@
 <% end %>
 
 <p><strong>Source: </strong><%= @recipe_food2["url"] %>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_food["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_food["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= image_tag @recipe_food["image"] %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_foods["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_foods["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= image_tag @recipe_foods["image"] %>
+            </p>
+          </div>
+      </div>
+    </div>

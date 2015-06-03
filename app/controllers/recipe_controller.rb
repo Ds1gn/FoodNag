@@ -17,13 +17,18 @@ class RecipeController < ApplicationController
 
   def results
     @recipe_food = Recipe.when_searched(params[:ingredients])
+    @ingredient_lines = @recipe_food["ingredientLines"]
 
+    @recipe_foods = Recipe.when_searched_a(params[:ingredients])
+    @ingredient_lines = @recipe_food["ingredientLines"]
+
+    @recipe_foodsb = Recipe.when_searched_a(params[:ingredients])
     @ingredient_lines = @recipe_food["ingredientLines"]
 
     @recipe_food2 = Recipe.when_searched2(params[:ingredients1],params[:ingredients2])
     @ingredient_lines2 = @recipe_food2["ingredientLines"]
   end
- 
+
   private
   def set_recipe
     Recipe.find(params[:id])
