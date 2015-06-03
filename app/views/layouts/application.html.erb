@@ -5,9 +5,8 @@
   <title>Food Nag</title>
   <meta name="description" content="FoodNag">
   <meta name="keywords" content="FoodNag">
-
 <!-- fonts in in dev use -->
-  <link href='http://fonts.googleapis.com/css?family=Bangers|Walter+Turncoat|Pacifico|Lobster|Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bangers|Walter+Turncoat|Pacifico|Lobster|Oswald:400,700' rel='stylesheet' type='text/css'>
 <!-- end of fonts -->
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -49,9 +48,6 @@
         <%= link_to "Login", new_user_session_path %>
       <% end %>
     </div> -->
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <%= yield %>
 

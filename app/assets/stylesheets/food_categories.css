@@ -20,7 +20,7 @@ color: black;
   color: #FF8F8F;
   font-size: 39px;
   text-align: center;
-  font-family: 'Walter Turncoat', cursive;
+  font-family: 'Oswald';
 }
 
 ul {
@@ -34,6 +34,13 @@ ul {
   margin: 0;
 }
 
+<<<<<<< HEAD
+=======
+/*html {
+  background: #a5dfdf;
+}*/
+
+>>>>>>> af9b0adc7c5b89e73b97eb022b6ee7d631e5818a
 section .open {
     background: #a5dfdf;
 }
@@ -49,8 +56,8 @@ section {
 
 
 .col-sm-12 span {
-  font-family: 'Bubblegum Sans', cursive;
-  font-size: 60px;
+  font-family: 'Oswald';
+  font-size: 50px;
   text-align: center;
   display: block;
   color: #993333;
@@ -59,6 +66,7 @@ section {
 
 .nav-cat{
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 300px;
@@ -102,12 +110,11 @@ section {
 .container-fridge {
   width: 50%;
   max-width: 750px;
-  background: $white_opaque;
+  background: #F9FCFF;
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
   box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
   padding: 1em 0;
 }
-
 

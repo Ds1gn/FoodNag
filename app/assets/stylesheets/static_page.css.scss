@@ -34,7 +34,6 @@
 }
 
 /* collapse menu styling */
-
 @media only screen and (max-width: 780px) {
 .collapsing, .in {background-color: #000; opacity: 0.4}
 }
@@ -154,6 +153,8 @@ div.wrapper {
    margin: 0 auto;
 }
 
+
+
 div.grid-unit {
   position: relative;
   width: 33.33%;
@@ -162,6 +163,7 @@ div.grid-unit {
   margin: 0px 0px 1.8em 0px;
   text-align: center;
 }
+
 
 div.circle:after {
   -webkit-border-radius: 50%;
@@ -225,6 +227,7 @@ section {
   margin: 0 4em 0 4em;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1280px) {
   div.wrapper {
   width: 100%;
