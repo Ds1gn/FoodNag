@@ -19,7 +19,8 @@
       <% @purchases.each do |p| %>
         <li><hr>
           <%= p.food.name || "None" %>
-          <%= link_to 'delete', purchase_path(p), method: :delete %>
+          <%= link_to purchase_path(p), class: "fa fa-trash", method: :delete do %>
+          <% end %>
         </li>
       <% end %>
   </ul>

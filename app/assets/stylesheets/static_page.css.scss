@@ -32,10 +32,16 @@
   color: #FFF;
 }
 
-@media only screen and (max-width: 780px) {
-.collapsing, .in {background-color: #000; opacity: 0.4}
+#h1-head {
+  margin-top: 400px;
+  color: orange;
+  text-align: center;
 }
 
+/*@media only screen and (max-width: 780px) {
+.collapsing, .in {background-color: #000; opacity: 0.4}
+}
+*/
 /* brand */
 
 .navbar-default .navbar-brand {
