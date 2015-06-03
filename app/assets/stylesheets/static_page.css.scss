@@ -14,6 +14,7 @@
   width: auto;
 /*  background-color: #A5DFDF;*/
   background: rgba(0, 0, 0, 0.5);
+  font-family: 'Oswald';
 }
 
 /* nav links */
@@ -23,7 +24,7 @@
   padding-top: 35px;
   font-size: 24px;
   margin-right: 20px;
-  -webkit-text-stroke: 1px #FFF;
+  -webkit-text-stroke: 1px #000;
   font-family: 'Oswald';
 }
 
@@ -32,15 +33,11 @@
   color: #FFF;
 }
 
-#h1-head {
-  margin-top: 400px;
-  color: orange;
-  text-align: center;
-}
-
+/* collapse menu styling */
 @media only screen and (max-width: 780px) {
 .collapsing, .in {background-color: #000; opacity: 0.4}
 }
+
 
 /* brand */
 
@@ -62,7 +59,8 @@ div#waste-counter{
   margin: 0;
   padding: 4em 0 4em 0;
   border: 1px black;
-  background-color: #A5DFDF;
+  background-color: #449d44;
+  border-color: #398439;
 }
 
 #counter {
@@ -76,19 +74,20 @@ div.clearfix {
 .callout {
   height: 263px;
   width: 100%;
-  background-color: #A5DFDF;
+  background-color: #449d44;
+  border-color: #398439;
 }
 
 .inner-container {
   padding-top: 5.5em;
 }
 
-/* Header Page */
+/* Header Page Background */
 
 div#page1 {
   height: 750px;
   width: 100%;
-  background: url("http://i.imgur.com/NCzuEQJ.jpg") no-repeat center center fixed;
+  background: url("http://i.imgur.com/lBCBDI5.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -130,20 +129,27 @@ div#page1 {
 /* body stylessss */
 
 h1 {
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 1em 0 0 0;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Oswald';
 }
 
 h2 {
   text-align: center;
   padding: 1em 0 1em 0;
-  margin: 0 0 0 0;
+  margin: 0;
   color: #FFF;
+  -webkit-text-stroke: 1px #000;
+}
+
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 div.wrapper {
-   width: 1280px;
+   width: 100%;
    margin: 0 auto;
 }
 
@@ -189,7 +195,7 @@ section.team {
 p.team-emph {
   font-size: 1.5em;
   line-height: 1.25em;
-  margin: 0;
+  margin-bottom: 10px;
   font-family: "Oswald";
 }
 
@@ -221,3 +227,61 @@ section {
   margin: 0 4em 0 4em;
 }
 
+<<<<<<< HEAD
+@media screen and (max-width: 1280px) {
+  div.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+}
+
+@media screen and (max-width: 768px) {
+  div.grid-unit {
+  width: 50%;
+}
+}
+
+@media screen and (max-width: 480px) {
+  div.grid-unit {
+  width: 100%;
+  float: none;
+  display: block;
+  padding: 0 1em 1em;
+}
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: #449d44;
+  border-color: #398439;
+  bottom: 0;
+}
+
+p.text-muted {
+  margin-top: 1em;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Oswald';
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Oswald';
+  font-size: 1.5em;
+}
