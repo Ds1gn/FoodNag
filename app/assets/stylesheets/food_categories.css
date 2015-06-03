@@ -34,13 +34,6 @@ ul {
   margin: 0;
 }
 
-<<<<<<< HEAD
-=======
-/*html {
-  background: #a5dfdf;
-}*/
-
->>>>>>> af9b0adc7c5b89e73b97eb022b6ee7d631e5818a
 section .open {
     background: #a5dfdf;
 }
@@ -60,7 +53,7 @@ section {
   font-size: 50px;
   text-align: center;
   display: block;
-  color: #993333;
+  color: #FFF;
   font-weight: 400;
 }
 
@@ -110,7 +103,7 @@ section {
 .container-fridge {
   width: 50%;
   max-width: 750px;
-  background: #F9FCFF;
+  background: #A3D9A3;
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
