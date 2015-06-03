@@ -32,16 +32,15 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-       	<li><%= link_to "Dashboard", dash_path %></li>
+       	<li><%= link_to "Search By Zip", dash_path %></li>
         <li><a href="mailto:food@nag.com?Subject=Hello%20again" target="_top">Contact</a></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       </ul>
-    </div><!--/.nav-collapse-->
+    </div>
   </div>
 </nav>
 <h1>Purchases for zipcode: <%= @zipcode %></h1>
 <h2>Total purchases: <%= @purchases_by_zip.size %></h2>
-
-
+<h1>Total Purchases Made: <%= Purchase.with_deleted.size %></h1>
+<h1>Total Users in <%= @zipcode %>: <%= @user.zip.count %></h1>
 <%= pie_chart @purchases_by_zip.joins(:food).group('foods.name').count %>
-<

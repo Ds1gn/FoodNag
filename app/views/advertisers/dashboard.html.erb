@@ -38,7 +38,7 @@
         <li><a href="mailto:food@nag.com?Subject=Hello%20again" target="_top">Contact</a></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       </ul>
-    </div><!--/.nav-collapse-->
+    </div>
   </div>
 </nav>
 <h1>HELPING YOU UNDERSTAND YOUR CUSTOMERS</h1>
@@ -52,8 +52,8 @@
 <div class="col-sm-8 col-sm-offset-2">
   <div class="form-group">
    <br><br><br>
-   <%= form_tag zip_path(), method: :get do %>
-  <%= text_field_tag :zip, "", class: "form-control", placeholder: "Zipcode"  %>
+    <%= form_tag zip_path(), method: :get do %>
+      <%= text_field_tag :zip, "", class: "form-control", placeholder: "Zipcode"  %>
    <br><%= submit_tag("submit", name: "") %>
 									 <% end %>
   </div>
