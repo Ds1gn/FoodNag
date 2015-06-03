@@ -21,10 +21,11 @@
 /* Navbar container Styling */
 
 .navbar-default {
-  border-color: transparent;
+  border-color: ;
   height: 100px;
   width: auto;
-  background-color: #A5DFDF;
+  background-color: #449d44;
+  font-family: "Oswald";
 }
 
 /* nav links */
@@ -34,7 +35,7 @@
   padding-top: 35px;
   font-size: 24px;
   margin-right: 20px;
-  -webkit-text-stroke: 1px #FFF;
+  -webkit-text-stroke: 1px #469797;
   font-family: 'Oswald';
 }
 
@@ -51,6 +52,7 @@
   color: #FFFFFF;
   margin-top: 0.6em;
   margin-left: -10px;
+  -webkit-text-stroke: 2px #469797;
 }
 
 .navbar-default .navbar-brand:hover,

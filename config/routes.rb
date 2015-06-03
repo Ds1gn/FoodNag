@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'advertisers_dash' => 'advertisers#dashboard', as: :dash 
+  get 'advertisers_dash' => 'advertisers#dashboard', as: :dash
   get 'advertisers/zip' => 'advertisers#zip', as: :zip
   get 'recipe' => 'recipe#recipeslist'
 
