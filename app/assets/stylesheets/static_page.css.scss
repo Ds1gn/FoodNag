@@ -32,6 +32,10 @@
   color: #FFF;
 }
 
+@media only screen and (max-width: 780px) {
+.collapsing, .in {background-color: #000; opacity: 0.4}
+}
+
 /* brand */
 
 .navbar-default .navbar-brand {
