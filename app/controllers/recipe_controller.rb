@@ -19,14 +19,21 @@ class RecipeController < ApplicationController
     @recipe_food = Recipe.when_searched(params[:ingredients])
     @ingredient_lines = @recipe_food["ingredientLines"]
 
-    @recipe_foods = Recipe.when_searched_a(params[:ingredients])
-    @ingredient_lines = @recipe_food["ingredientLines"]
+    @recipe_food1 = Recipe.when_searched1(params[:ingredients])
+    @ingredient_lines = @recipe_food1["ingredientLines"]
 
-    @recipe_foodsb = Recipe.when_searched_a(params[:ingredients])
-    @ingredient_lines = @recipe_food["ingredientLines"]
+    @recipe_food2 = Recipe.when_searched2(params[:ingredients])
+    @ingredient_lines = @recipe_food2["ingredientLines"]
 
-    @recipe_food2 = Recipe.when_searched2(params[:ingredients1],params[:ingredients2])
-    @ingredient_lines2 = @recipe_food2["ingredientLines"]
+    @recipe_food3 = Recipe.when_searched3(params[:ingredients1],params[:ingredients2])
+    @ingredient_lines2 = @recipe_food3["ingredientLines"]
+
+    @recipe_food4 = Recipe.when_searched4(params[:ingredients1],params[:ingredients2])
+    @ingredient_lines2 = @recipe_food4["ingredientLines"]
+
+    @recipe_food5 = Recipe.when_searched5(params[:ingredients2],params[:ingredients2])
+    @ingredient_lines2 = @recipe_food5["ingredientLines"]
+
   end
 
   private

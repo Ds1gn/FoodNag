@@ -92,7 +92,7 @@ belongs_to :purchase
 
 	end
 
-      def self.when_searched_a(ingredients)
+      def self.when_searched1(ingredients)
 # These code snippets use an open-source library. http://unirest.io/ruby
     response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients}",
       headers:{
@@ -106,7 +106,7 @@ belongs_to :purchase
 
   end
 
-  def self.when_searched_b(ingredients)
+  def self.when_searched2(ingredients)
 # These code snippets use an open-source library. http://unirest.io/ruby
     response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients}",
       headers:{
@@ -120,7 +120,7 @@ belongs_to :purchase
 
   end
 
-	def self.when_searched2(ingredients1,ingredients2)
+	def self.when_searched3(ingredients1,ingredients2)
 # These code snippets use an open-source library. http://unirest.io/ruby
 		response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients1}%2C+#{ingredients2}",
   		headers:{
@@ -130,8 +130,36 @@ belongs_to :purchase
 
 		recipe_result = response.body
 		return nil if recipe_result.blank? || recipe_result["hits"].blank?
-		recipe_data = recipe_result["hits"][1]["recipe"]
+		recipe_data = recipe_result["hits"][0]["recipe"]
 
 	end
+
+  def self.when_searched4(ingredients1,ingredients2)
+# These code snippets use an open-source library. http://unirest.io/ruby
+    response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients1}%2C+#{ingredients2}",
+      headers:{
+      "X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
+      "Accept" => "application/json"
+      }
+
+    recipe_result = response.body
+    return nil if recipe_result.blank? || recipe_result["hits"].blank?
+    recipe_data = recipe_result["hits"][1]["recipe"]
+
+  end
+
+  def self.when_searched5(ingredients1,ingredients2)
+# These code snippets use an open-source library. http://unirest.io/ruby
+    response = Unirest.get "https://edamam-recipe-search-and-diet-v1.p.mashape.com/search?_app_id=75207d81&_app_key=3220a736ae2581128d020ee6e6d71d5e&q=#{ingredients1}%2C+#{ingredients2}",
+      headers:{
+      "X-Mashape-Key" => "h6kenRNE9tmshGtkjQsKx6DupaXrp1bYZ2djsnqk7rqx1WUvOb",
+      "Accept" => "application/json"
+      }
+
+    recipe_result = response.body
+    return nil if recipe_result.blank? || recipe_result["hits"].blank?
+    recipe_data = recipe_result["hits"][2]["recipe"]
+
+  end
 
 end

@@ -1,28 +1,6 @@
-
-<h1><%= @recipe_food["label"] %></h2>
-
-<p><%= @recipe_food["level"].humanize %></p>
-
-<p></p>
-
-<% @ingredient_lines.each do |r| %>
-<p><%= r %></p>
-<% end %>
-
-<p><strong>Source: </strong><%= @recipe_food["url"] %>
-
-<h1><%= @recipe_food2["label"] %></h2>
-
-<p><%= @recipe_food2["level"].humanize %></p>
-
-<p><%= image_tag @recipe_food2["image"] %></p>
-
-<% @ingredient_lines2.each do |r| %>
-<p><%= r %></p>
-<% end %>
-
-<p><strong>Source: </strong><%= @recipe_food2["url"] %>
-
+ <div class="fridge">
+   <h2>Your Mixed + Matched Results!</h2>
+  </div>
   <div class="container">
       <div class="row">
           <div class="col-sm-4">
@@ -33,18 +11,62 @@
               <%= @recipe_food["level"].humanize %>
             </p>
             <p class="text">
-              <%= image_tag @recipe_food["image"] %>
+              <%= link_to (image_tag @recipe_food["image"]), @recipe_food["url"]  %>
             </p>
           </div>
           <div class="col-sm-4">
             <p class="title">
-              <%= @recipe_foods["label"] %>
+              <%= @recipe_food1["label"] %>
             </p>
             <p class="text">
-              <%= @recipe_foods["level"].humanize %>
+              <%= @recipe_food1["level"].humanize %>
             </p>
             <p class="text">
-              <%= image_tag @recipe_foods["image"] %>
+              <%= link_to (image_tag @recipe_food1["image"]), @recipe_food1["url"] %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_food2["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_food2["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= link_to (image_tag @recipe_food2["image"]), @recipe_food2["url"] %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_food3["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_food3["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= link_to (image_tag @recipe_food3["image"]), @recipe_food3["url"] %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_food4["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_food4["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= link_to (image_tag @recipe_food4["image"]), @recipe_food4["url"] %>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="title">
+              <%= @recipe_food5["label"] %>
+            </p>
+            <p class="text">
+              <%= @recipe_food5["level"].humanize %>
+            </p>
+            <p class="text">
+              <%= link_to (image_tag @recipe_food5["image"]), @recipe_food5["url"] %>
             </p>
           </div>
       </div>
